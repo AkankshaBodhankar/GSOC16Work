@@ -26,7 +26,7 @@ Download XAMPP from here [XAMPP download](https://www.apachefriends.org/download
 
 Go to your terminal and execute this command
 
-    $ git clone https://github.com/systers/PCSA-Android
+    $ git clone https://github.com/systers/PCSA-web
 
 Or download the ZIP file from above
 
@@ -43,6 +43,7 @@ Or download the ZIP file from above
 
 The documentation can be found here
 1.[project docs](https://github.com/AkankshaBodhankar/GSOC16Work/tree/master/project-docs)
+
 2.[other docs](https://github.com/AkankshaBodhankar/GSOC16Work/tree/master/work-docs)
 
 
