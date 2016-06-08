@@ -1,0 +1,112 @@
+a:link
+{
+	color: #ffffff;
+}
+
+a:visited
+{
+   color: #ffffff;
+}
+
+a:hover
+{
+	color: blue;
+}
+
+body
+{
+	background-color: #05D197;
+}
+
+.button
+{
+	background-color: #2db58f;
+	border-width: 3px;
+	border-color: #ffffff;
+	color: #ffffff;
+	font-size: 20px;
+	height: 60px;
+	margin-top: 30px;
+	text-align: center;
+	width: 25%;	
+}
+
+.button:hover
+{
+    background-color: #02845f !important;
+}
+
+.div
+{
+	margin-top: 100px;
+}
+
+.div-reg
+{
+	margin-top: 30px;
+}
+
+.input-box
+{
+    background-color: transparent;
+    border-bottom: solid #eeeeee 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: #eeeeee;
+    outline: none;
+    outline-style: none;
+    padding: 3px 10px;
+}
+
+.input-box:focus
+{
+	box-shadow: 0px 2px;
+}
+
+#line
+{
+	border-width: 2px;
+	color: #FFFFFF;
+	width: 50%;
+}
+
+.tables
+{
+    border-collapse:separate;
+    border-spacing:0 45px;
+}
+
+.text
+{
+	color: #FFFFFF;
+	font-style: bold;
+}
+
+/*placeholder css*/
+
+::-webkit-input-placeholder 
+{ /* WebKit, Blink, Edge */
+    color:    #d3d3d3;
+    font-size: 15px;
+}
+
+:-moz-placeholder 
+{ /* Mozilla Firefox 4 to 18 */
+   color:    #d3d3d3;
+   font-size: 15px;
+   opacity:  1;
+}
+
+::-moz-placeholder 
+{ /* Mozilla Firefox 19+ */
+   color:    #d3d3d3;
+   font-size: 15px;
+   opacity:  1;
+}
+
+:-ms-input-placeholder 
+{ /* Internet Explorer 10-11 */
+   color:    #d3d3d3;
+   font-size: 15px;
+}
