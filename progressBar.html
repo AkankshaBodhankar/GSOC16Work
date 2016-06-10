@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<style>
+body
+{
+  background-color: #05D197;
+  margin: 0;
+}
+
+#line
+{
+  width: 50%;
+}
+
+#myProgress 
+{
+  position: relative;
+  width: 80%;
+  height: 30px;
+  background-color: #ddd;
+  margin-top: 200px;
+}
+
+#myBar 
+{
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: #FBC469;
+}
+.text
+{
+  color: #FFFFFF;
+  font-style: bold;
+}
+
+</style>
+<body onload="move()">
+<center>
+<div>
+    <h1 class="text">First Aide</h1>
+    <hr id="line">
+    <h2 class="text">A Confidentiality Safety Resource for Peace Corps Volunteers</h2>
+</div>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
+
+</center>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      window.location = "http://localhost:8080/PCSA-webapp/welcome.html";
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>

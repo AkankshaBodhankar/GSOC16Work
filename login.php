@@ -5,6 +5,7 @@
    session_start(); 
    if (isset($_POST['email'])) 
    {
+      //MYSQL Injection 
       $email = mysqli_real_escape_string($connection, $_POST['email']);
       $password = mysqli_real_escape_string($connection, $_POST['password']);
      
@@ -16,7 +17,7 @@
        if ($rows == 1) 
        {
           $_SESSION['email_user']=$email; 
-          header("location: welcome.html"); 
+          header("location: progressBar.html"); 
        }
        else 
        {
