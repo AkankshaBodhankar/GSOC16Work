@@ -8,7 +8,7 @@
 <div id="accordian">
 <ul>
   <li>
-    <h2><img src="images/PClogo2.png"/><a href="welcome.html">FirstAide</a></h2>
+    <h2><img src="images/PClogoWhite.png"/><a href="welcome.html">FirstAide</a></h2>
     <hr>
     <h3><a href="getHelpNow.html">Get Help Now</a></h3>
     <h3><a href="#">Circle of Trust</a></h3>

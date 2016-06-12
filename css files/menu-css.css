@@ -52,7 +52,7 @@
 
 #accordian h3 a:hover 
 {
-	background: #FFD590;
+	background: #ffd590;
 	border-left: 5px solid orange;
 }
 
@@ -124,7 +124,7 @@ li.last
 
 ul 
 {
-	background-color: #fbc469;
+	background-color: #FBC469;
 	height: 100%;
     list-style-type: none;
     margin: 0;
