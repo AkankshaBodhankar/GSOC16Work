@@ -8,7 +8,7 @@
 <div id="accordian">
 <ul>
   <li>
-    <h2><img src="images/PClogoWhite.png"/><a href="welcome.html">FirstAide</a></h2>
+    <h2><img src="images/PClogoWhite.png"/><a href="welcome.php">FirstAide</a></h2>
     <hr>
     <h3><a href="getHelpNow.html">Get Help Now</a></h3>
     <h3><a href="#">Circle of Trust</a></h3>
@@ -72,8 +72,8 @@
     </li>
 </div>
 
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="javascripts/home.js"></script>
+<script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="javascripts/menu.js"></script>
   
 </body>
 </html>

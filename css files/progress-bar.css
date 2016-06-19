@@ -1,0 +1,27 @@
+body {
+  background-color: #05D197;
+  margin: 0;
+}
+
+#line {
+  width: 50%;
+}
+
+#Progress {
+  background-color: #ddd;
+  height: 30px;
+  margin-top: 200px;
+  position: relative;
+  width: 80%;
+}
+
+#Bar {
+  background-color: #fbc469;
+  height: 100%;
+  position: absolute;
+  width: 1%; 
+}
+.text {
+  color: #ffffff;
+  font-style: bold;
+}

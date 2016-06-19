@@ -1,23 +1,28 @@
 <?php
-   
-   require 'dbconnect.php';
 
    session_start(); 
-   if (isset($_POST['email'])) 
+   if(isset($_SESSION['email']))
+   {  
+     header("location: welcome.php"); 
+   }
+   
+   require 'dbconnect.php'; 
+   if (isset($_POST['email'])&&isset($_POST['password'])&&!empty($_POST['email'])&&!empty($_POST['password'])) 
    {
-      //MYSQL Injection 
+      //MYSQL Injection added security
       $email = mysqli_real_escape_string($connection, $_POST['email']);
       $password = mysqli_real_escape_string($connection, $_POST['password']);
-     
       $email = stripslashes($email);
       $password = stripslashes($password);
-      
-      $query = mysqli_query($connection,"select * from user where password='$password' AND email='$email'");
+
+      //Match given password with the saved one in db
+      $query = mysqli_query($connection,"CALL login('$password','$email')");
       $rows = mysqli_num_rows($query);
-       if ($rows == 1) 
+       if ($rows == 1) //password is correct
        {
-          $_SESSION['email_user']=$email; 
-          header("location: progressBar.html"); 
+          $_SESSION['email']=$email; 
+    
+          header("location: progressBar.php"); 
        }
        else 
        {
@@ -40,6 +45,7 @@
     <hr id="line">
     <h2 class="text">A Confidentiality Safety Resource for Peace Corps Volunteers</h2>
   </div>
+
   <div class="div">
   <table class="tables">
     <tr>
@@ -52,6 +58,7 @@
        </tr>
   </table>
   </div>
+
   <div class="div">
        <input class="button" type="submit" id="submit" value="Sign in to Account">
     <br><br>

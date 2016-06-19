@@ -1,3 +1,13 @@
+<?php
+   
+   session_start();
+   if(!isset($_SESSION['email']))
+   {  
+      header("location: login.php"); 
+   }
+   else
+    $_SESSION['welcomeopened'] = 1; //to prevent going back to progressBar(use in progressBar.php)
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +25,7 @@
     <hr class="line">
     <h2 class="text">Recommended Pages to Get Started</h2>
   </div>
+
   <table id="table">
   	<tr>
   	  <td>
@@ -29,11 +40,13 @@
   	    <button class="button" id="bt-ghana" name="bt-ghana">Things to know before you travel to Ghana</button>
   	  </td>
   	  <td>
-  	    <button class="button-org" id="bt-peerst" name="bt-peerst">Set your peer counselling preferences<img src="images/settings.png" style="height: 20px;width: 20px;" /></button>
+  	    <button class="button-org" id="bt-peerstng" name="bt-peerstng">
+          Set your peer counselling preferences<img src="images/settings.png" style="height: 20px;width: 20px;" />
+        </button>
   	  </td>
   	</tr>
   </table>
-  </div>
+</div>
 </center>
 </body>
 </html>

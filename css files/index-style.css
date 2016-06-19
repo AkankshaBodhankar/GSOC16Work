@@ -1,12 +1,10 @@
-.title
-{
+.title {
 	color: #FFFFFF;
     font-size: 100px;
 	font-style: bold;
 }
 
-body
-{
+body {
 	background-color: #05D197;
 	height: 240px;
     left: 50%;

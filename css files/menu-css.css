@@ -1,5 +1,4 @@
-#accordian 
-{
+#accordian {
 	background: #ffd590;
 	color: white;
 	/*Some cool shadow and glow effect*/
@@ -10,8 +9,7 @@
     height: 100%
 }
 
-#accordian h2 img
-{ 
+#accordian h2 img { 
    float:left;
    height: 30px; 
    margin-bottom:10px;
@@ -21,8 +19,7 @@
    width: 30px;
 }
 
-#accordian h2 a
-{
+#accordian h2 a {
 	background: #ffd590; 
 	background: linear-gradient(#ffd590, #ffd590);
 	color: #ffffff;
@@ -32,8 +29,7 @@
 	line-height: 34px;	
 }
 
-#accordian h3 
-{
+#accordian h3 {
 	background: #ffd590; 
 	background: linear-gradient(#ffd590, #ffd590);
 	color: #ffffff;
@@ -42,37 +38,30 @@
 	font-style: bold;
 	line-height: 34px;
 	padding: 0 10px;
-	
 }
 
-#accordian h3 a 
-{
+#accordian h3 a {
 	color: #ffffff;
 }
 
-#accordian h3 a:hover 
-{
+#accordian h3 a:hover {
 	background: #ffd590;
 	border-left: 5px solid orange;
 }
 
-#accordian h3:hover 
-{
+#accordian h3:hover {
 	text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
-#accordian li 
-{
+#accordian li {
 	list-style-type: none;
 }
 
-#accordian li.active ul
-{
+#accordian li.active ul {
 	display: block;
 }
 
-#accordian ul ul li a 
-{
+#accordian ul ul li a {
 	color: white;
 	display: block;
 	font-size: 15px;
@@ -83,47 +72,40 @@
 	transition: all 0.15s;
 }
 
-#accordian ul ul li a:hover 
-{
-	background: #FFD590;
+#accordian ul ul li a:hover {
+	background: #ffd590;
 	border-left: 5px solid orange;
 }
 
 /*hide the non active LIs by default*/
-#accordian ul ul 
-{
+#accordian ul ul {
 	display: none;
 }
 
-li a 
-{
+li a {
     display: block;
     color: #000;
     padding: 8px 0 8px 16px;
     text-decoration: none;
 }
 
-li a.active
-{
+li a.active {
     background-color: #4CAF50;
     color: white;
 }
 
-li a:hover:not(.active)
-{
+li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
 
-li.last
-{
+li.last {
 	background-color:red;
     float: none;
     overflow: hidden;
 }
 
-ul 
-{
+ul {
 	background-color: #FBC469;
 	height: 100%;
     list-style-type: none;
@@ -133,8 +115,7 @@ ul
     width: 250px;    
 }
 
-ul ul li a
-{
+ul ul li a {
 	color: white;
 	display: block;
 	font-size: 11px;
@@ -145,10 +126,6 @@ ul ul li a
 	transition: all 0.15s;
 }
 
-ul ul 
-{
+ul ul {
 	display: none;
 }
-
-
-

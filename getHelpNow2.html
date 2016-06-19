@@ -1,3 +1,12 @@
+<?php
+   
+   session_start();
+   if(!isset($_SESSION['email']))
+   {  
+      header("location: login.php"); 
+   }
+   
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,33 +19,39 @@
 ?>
 <center>
 <div class="window">
+  
   <div>
     <h1 class="text">Get Help Now</h1>
     <hr class="line">
   </div>
+
   <div id="bw-arrow">
-    <a href="getHelpNow.html"><img src="images/bw-arrow.png" style="height: 50px; width: 50px;"></a>
+    <a href="getHelpNow.html">
+      <img src="images/bw-arrow.png" style="height: 50px; width: 50px;">
+    </a>
   </div>
+
   <div id="div1">
-  <table id="table">
+  <table id="btn-table">
     <tr>
       <td>
          <button class="button" onclick = "location.href='/PCSA-webapp/PCSaves.html';" id="bt-PCSaves" name="bt-PCSaves">PC Saves Anonymous Helpline</button>
       </td>
       <td>
-        <button class="button" onclick = "location.href='/PCSA-webapp/officeOfVictimAdvocacy.html';" id="bt-off-va" name="bt-off-va">Office of Victim Advocacy</button>
+        <button class="button" onclick = "location.href='/PCSA-webapp/officeOfVictimAdvocacy.html';" id="bt-offVA" name="bt-offVA">Office of Victim Advocacy</button>
       </td>
     </tr>
     <tr>
       <td>
-        <button class="button" id="bt-off-ig" name="bt-off-ig" onclick = "location.href='/PCSA-webapp/officeOfInspectorGeneral.html';" >Office of Inspector General</button>
+        <button class="button" id="bt-offIG" name="bt-offIG" onclick = "location.href='/PCSA-webapp/officeOfInspectorGeneral.html';" >Office of Inspector General</button>
       </td>
       <td>
-        <button class="button" id="bt-off-crd" name="bt-off-crd" onclick = "location.href='/PCSA-webapp/officeOfCivilRightsAndDiversity.html';" >Office of Civil Rights and Diversity</button>
+        <button class="button" id="bt-offCRD" name="bt-offCRD" onclick = "location.href='/PCSA-webapp/officeOfCivilRightsAndDiversity.html';" >Office of Civil Rights and Diversity</button>
       </td>
     </tr>
   </table>
   </div>
+
 </div>     
 </center>
 </body>

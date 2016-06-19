@@ -1,11 +1,9 @@
-body
-{
+body {
 	background-color: #05d197;
 	margin: 0;
 }
 
-.button /*The green buttons css*/
-{   
+.button { /*The green buttons css*/
 	background-color: #2db58f;
 	border-width: 3px;
 	border-color: #ffffff;
@@ -18,13 +16,11 @@ body
 	width: 100%;	
 }
 
-.button:hover
-{
+.button:hover {
     background-color: #02845f;
 }
 
-.button-org /*Orange buttons css*/
-{
+.button-org {/*Orange buttons css*/
 	background-color: #ffd590;
 	border-width: 3px;
 	border-color: #ffffff;
@@ -37,19 +33,16 @@ body
 	width: 100%;
 }
 
-.button-org:hover
-{
+.button-org:hover {
     background-color: #ffffff;
     color: #ffd590;
 }
 
-.line
-{
+.line {
     width: 50%;
 }
 
-#table
-{
+#table {
     border-collapse:separate;
     border-spacing:50px 50px;
    /* display: inline-block;*/
@@ -57,14 +50,12 @@ body
     height: 200px;
 }
 
-.text
-{
+.text {
 	color: #ffffff;
 	font-style: bold;
 }
 
-.window
-{
+.window {
 	height: 100%;
 	margin-left: 25%;
 	padding: 1px 16px;

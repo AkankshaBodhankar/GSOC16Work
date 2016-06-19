@@ -1,24 +1,29 @@
 <?php
-   
+
+   session_start();
+   if(isset($_SESSION['email']))
+   {  
+      header("location: welcome.php"); 
+   }
+
    require 'dbconnect.php';
 
    if(isset($_POST['email'])&&isset($_POST['uname'])&&isset($_POST['password'])&&isset($_POST['host_country']))
    {
     
-      $sql="SELECT * from user WHERE email='$_POST[email]'";
+      $sql="CALL dupemail('$_POST[email]')";
       $result = mysqli_query($connection,$sql);
 
-      if(mysqli_num_rows($result)>=1)
+      if(mysqli_num_rows($result)>=1) //check if it is a duplicate email
       {
          echo "<script type='text/javascript'>alert('User with this email already exists');</script>";
-
       }
       else
       {
       
-        $newUser="INSERT INTO user(email,username,password,host_country) values('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')";
+        $newUser="CALL registration('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')"; //inserts into the user table
 
-        if(mysqli_query($connection,$newUser))
+        if(mysqli_query($connection,$newUser))//if successfully added user
             header('Location: login.php');
         else
           echo "<script type='text/javascript'>alert('Error in adding user');</script>";

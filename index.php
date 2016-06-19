@@ -11,6 +11,6 @@
 </center>
 </body>
 <?php
-    header("refresh:3;url=login.php");
+    header("refresh:2;url=login.php");
 ?>
 </html>
