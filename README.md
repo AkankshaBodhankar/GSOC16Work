@@ -48,7 +48,15 @@ The documentation can be found here
 2.[other docs](https://github.com/AkankshaBodhankar/GSOC16Work/tree/master/work-docs)
 
 ###Guide to Naming Convention Used
-[Convetions and rules](https://google.github.io/styleguide/htmlcssguide.xml)
+[Conventions and rules](https://google.github.io/styleguide/htmlcssguide.xml)
+
+###How to Use CALL and SMS feature
+This project makes use of Twilio for sending SMS and making CALLS. Twilio is a third party platform which provides API in PHP for serving the purpose.
+Read more about Twilio here: [Twilio](https://www.twilio.com/)
+
+Get started with SMS and Call by creating an Account on Twilio. Use the Account SID and Token provided by Twilio for your account and paste them in the twilioSMS.php and twilioCall.php. Also, a free number will be provided by Twilio, use that as toNumber in both the files. 
+
+
 
 
 
