@@ -47,6 +47,9 @@ The documentation can be found here
 
 2.[other docs](https://github.com/AkankshaBodhankar/GSOC16Work/tree/master/work-docs)
 
+###Guide to Naming Convention Used
+[Convetions and rules](https://google.github.io/styleguide/htmlcssguide.xml)
+
 
 
 
