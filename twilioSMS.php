@@ -51,7 +51,7 @@ if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
     // avoid tinyhttp exception
     $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(
     CURLOPT_SSL_VERIFYPEER => false
-)));
+    )));
 
   $objConnection = new Services_Twilio($AccountSid, $AuthToken, '2010-04-01', $http); 
 

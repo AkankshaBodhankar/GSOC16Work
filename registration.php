@@ -5,14 +5,13 @@
    {  
       header("location: welcome.php"); 
    }
-
    require 'dbconnect.php';
-
    if(isset($_POST['email'])&&isset($_POST['uname'])&&isset($_POST['password'])&&isset($_POST['host_country']))
    {
     
       $sql="CALL dupemail('$_POST[email]')";
       $result = mysqli_query($connection,$sql);
+      $connection -> next_result(); //used when there are multiple procedure calls, use after ecah procedure call
 
       if(mysqli_num_rows($result)>=1) //check if it is a duplicate email
       {
@@ -22,14 +21,12 @@
       {
       
         $newUser="CALL registration('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')"; //inserts into the user table
-
         if(mysqli_query($connection,$newUser))//if successfully added user
             header('Location: login.php');
         else
           echo "<script type='text/javascript'>alert('Error in adding user');</script>";
       }
       mysqli_close($connection); 
-
    }
    
 ?>
