@@ -35,6 +35,8 @@
 if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
 {
   // ==== Control Vars =======
+
+  //remove all dashes and spaces in frm number and to number
   $strFromNumber = "";//phone number provided by twilio 
   $strToNumber = "+".$_GET['phone'];//get number from the twilio-sms.js file
   $strMsg = $_POST['SMS-body']; 
