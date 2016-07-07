@@ -54,8 +54,7 @@ The documentation can be found here
 This project makes use of Twilio for sending SMS and making CALLS. Twilio is a third party platform which provides API in PHP for serving the purpose.
 Read more about Twilio here: [Twilio](https://www.twilio.com/)
 
-Get started with SMS and Call by creating an Account on Twilio. Use the Account SID and Token provided by Twilio for your account and paste them in the twilioSMS.php and twilioCall.php. Also, a free number will be provided by Twilio, use that as fromNumber in both the files. 
-
+Get started with SMS and Call by creating an Account on Twilio. Use the Account SID and Token provided by Twilio for your account and paste them in the twilioSMS.php, twilioCall.php and groupsms.php. Also, a free number will be provided by Twilio, use that as fromNumber in all the files. 
 
 
 
