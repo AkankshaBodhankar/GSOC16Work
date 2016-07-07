@@ -11,7 +11,7 @@
     <h2><img src="images/PClogoWhite.png"/><a href="welcome.php">FirstAide</a></h2>
     <hr>
     <h3><a href="getHelpNow.html">Get Help Now</a></h3>
-    <h3><a href="#">Circle of Trust</a></h3>
+    <h3><a href="circleOfTrust.php">Circle of Trust</a></h3>
   </li>
     <li>
       <h3>Safety Tools</h3>

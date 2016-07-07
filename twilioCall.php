@@ -35,12 +35,12 @@
     // Twilio REST API version
     $version = "2010-04-01";
 
-    // Set your Account SID and AuthToken
-    $sid = '';
-    $token = '';
+    // Set our Account SID and AuthToken
+    $sid = 'AC352153773dfb04678b4a875f509169ee';
+    $token = '5d310051fdd83757fa6bbb157dbdc90a';
 
     // A phone number you have previously validated with Twilio
-    $fromphonenumber = '';
+    $fromphonenumber = '+12056240076';
     $tophonenumber = "+".$_GET['phone'];
 
      $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(

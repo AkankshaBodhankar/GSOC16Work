@@ -19,10 +19,21 @@
       }
       else
       {
-      
+        $email = $_POST['email'];
         $newUser="CALL registration('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')"; //inserts into the user table
-        if(mysqli_query($connection,$newUser))//if successfully added user
+
+        if(mysqli_query($connection,$newUser))
+        {//if successfully added user then add comrades of user
+            $connection->next_result();
+            for($i=1;$i<=6;$i++)
+            {
+              $addcomrade = "CALL addcomrade($i,'$email')";
+              mysqli_query($connection,$addcomrade);
+              $connection->next_result();
+            }
+
             header('Location: login.php');
+        }
         else
           echo "<script type='text/javascript'>alert('Error in adding user');</script>";
       }
@@ -36,7 +47,7 @@
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/loginAndRegistration.css">
   <form action="registration.php" method="POST" onsubmit="return validate()" />
-  <script type="text/javascript" src="javascripts/validation.js"></script>
+  <script type="text/javascript" src="javascripts/validation-v12.js"></script>
 </head>
 <body>
 <center>

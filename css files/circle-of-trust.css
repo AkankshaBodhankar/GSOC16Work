@@ -1,51 +1,14 @@
 body {
-	background-color: #05D197;
+	background-color: #05d197;
 	margin: 0;
 }
-
-.block {
-	background-color: #2db58f;
-	border: 3px solid #ffffff;
-	color: #ffffff;
-	cursor: pointer;
-	font-size: 20px;
-	height: 100%;
-	margin-top: 30px;
-	padding: 20px;	
-	width: 400px;	
-}
-
-#btn-table {
-    border-collapse:separate;
-    border-spacing:50px 50px;
-    width: 100%;
-    height: 200px;
-}
-
-.button {  /*The big green buttons*/ 
-    background-color: #2db58f;
-	border-width: 3px;
-	border-color: #ffffff;
-	color: #ffffff;
-	cursor: pointer;
-	font-size: 20px;
-	height: 150px;
-	margin-top: 30px;
-	text-align: center;
-	width: 100%;	
-}
-
-.button:hover {
-    background-color: #02845f;
-}
-
 #bw-arrow {
 	margin-left: 0px;
-	margin-top: 250px;
+	margin-top: 200px;
 	position: absolute;
 }
 
-/* The Close Button in popup */
+/* The Close Button in popup*/
 .close {
     color: #ffffff;
     float: right;
@@ -59,25 +22,30 @@ body {
     cursor: pointer;
 }
 
-#fw-arrow {
-	float: right;
-	display: inline-block;
-	margin-top: 0px;
+.icons-container .icons-row {
+	margin: 64px;	
 }
-
-#input {
-	background-color: #2db58f;
-	border: 3px solid #ffffff;
-	color: #ffffff;
+.icons-container .icons-row img {
+	cursor: pointer;
+	margin:0 64px;
+}
+#ic-edit{
+	margin: 0 700px 0 0px;
+}
+.inputs input {
+	
+	background-color: #ffffff;
+	border: 3px solid #2db58f;
+	color: #2db58f;
 	font-size: 20px;
 	height: 5px;
-	margin-top: 30px;
+	margin: 10px;
 	padding: 20px;	
-	width: 400px;	
+	width: 500px;	
 }
 
 .line {
-    width: 50%;
+    width: 80%;
 }
 
 /*popup css*/
@@ -138,16 +106,12 @@ body {
     background-color: #02845f;
 }
 
-#SMS-body {
-	background-color: #2db58f;
-	border: 3px solid #ffffff;
-	color: #ffffff;
-	cursor: pointer;
-	font-size: 20px;
-	height: 200px;
-	margin-top: 30px;
-	padding: 20px;	
-	width: 400px;	
+#table {
+    border-collapse:separate;
+    border-spacing:50px 50px;
+   /* display: inline-block;*/
+    width: 100%;
+    height: 200px;
 }
 
 .text {
@@ -162,23 +126,24 @@ body {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #d3d3d3;
+    color:    #2db58f;
     font-size: 15px;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #d3d3d3;
+   color:    #2db58f;
    font-size: 15px;
    opacity:  1;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #d3d3d3;
+   color:    #2db58f;
    font-size: 15px;
    opacity:  1;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #d3d3d3;
+   color:    #2db58f;
    font-size: 15px;
 }
+

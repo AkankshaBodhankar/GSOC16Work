@@ -9,7 +9,7 @@
    require 'dbconnect.php'; 
    if (isset($_POST['email'])&&isset($_POST['password'])&&!empty($_POST['email'])&&!empty($_POST['password'])) 
    {
-      //MYSQL Injection added security
+      //Prevent MYSQL Injection, added security
       $email = mysqli_real_escape_string($connection, $_POST['email']);
       $password = mysqli_real_escape_string($connection, $_POST['password']);
       $email = stripslashes($email);

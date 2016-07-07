@@ -3,6 +3,8 @@
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/gethelpnow-style.css"/>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
   <form method="POST"/>
 </head>
@@ -35,9 +37,7 @@
 if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
 {
   // ==== Control Vars =======
-
-  //remove all dashes and spaces in frm number and to number
-  $strFromNumber = "";//phone number provided by twilio 
+  $strFromNumber = "";
   $strToNumber = "+".$_GET['phone'];//get number from the twilio-sms.js file
   $strMsg = $_POST['SMS-body']; 
 
@@ -46,14 +46,14 @@ if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
    //include the Twilio PHP library 
   require_once ("Services/Twilio.php");
  
-    // set your AccountSid and AuthToken - from www.twilio.com/user/account
+    // set our AccountSid and AuthToken - from www.twilio.com/user/account
    $AccountSid = "";
    $AuthToken = "";
  
     // avoid tinyhttp exception
     $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(
     CURLOPT_SSL_VERIFYPEER => false
-    )));
+)));
 
   $objConnection = new Services_Twilio($AccountSid, $AuthToken, '2010-04-01', $http); 
 
