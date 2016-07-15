@@ -30,7 +30,7 @@
 </body>
 </html>
 <?php
-
+/*
     // Include the Twilio PHP library for making a call
     require_once ("Services/Twilio.php");
 
@@ -59,7 +59,7 @@
             $tophonenumber, // The number of the phone receiving call
             'http://demo.twilio.com/welcome/voice/' // The URL Twilio will request when the call is answered
         );
-        echo '"<script type='text/javascript'>salert('Success','Call started','success');</script>"';
+        echo "<script type='text/javascript'>salert('Success','Call started','success');</script>";
     } catch (Exception $e) {
         echo 'Error: ' . $e->getMessage();
-    }
+    }*/

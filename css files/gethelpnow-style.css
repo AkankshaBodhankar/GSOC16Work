@@ -80,6 +80,12 @@ body {
     width: 50%;
 }
 
+#location{
+	background-color: #2db58f;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+
 /*popup css*/
 .popup {
 	background-color: #2db58f; 
