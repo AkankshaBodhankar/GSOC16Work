@@ -11,9 +11,9 @@ function setnum(id)
 		case "PCMO-call":
 		{
           if(location=="Syria")        //set var phonenum according to location selected
-		    phonenum = "+918885693793";
+		    phonenum = "4444";
 	      else if(location =="Uganda")
-		    phonenum = "+917013120891";
+		    phonenum = "1111";
 	      else if(location == "Tunisia")
 		    phonenum = "7777";
 		  break;	
