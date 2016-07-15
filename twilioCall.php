@@ -3,7 +3,7 @@
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/gethelpnow-style.css"/>
-  <script type="text/javascript" src="javascripts/twilio-call.js"></script>
+  <link rel="stylesheet" href="css files/sweetalert.css">
   <form method="POST"/>
 </head>
 <body>
@@ -24,10 +24,12 @@
 
 </div>     
 </center>
+  <script src="javascripts/sweetalert.min.js"></script>
+  <script src="javascripts/sweetalert.js"></script>
+  <script src="javascripts/twilio-call.js"></script>
 </body>
 </html>
 <?php
-/*
 
     // Include the Twilio PHP library for making a call
     require_once ("Services/Twilio.php");
@@ -36,11 +38,11 @@
     $version = "2010-04-01";
 
     // Set our Account SID and AuthToken
-    $sid = '';
-    $token = '';
+    $sid = 'AC352153773dfb04678b4a875f509169ee';
+    $token = '5d310051fdd83757fa6bbb157dbdc90a';
 
     // A phone number you have previously validated with Twilio
-    $fromphonenumber = '';
+    $fromphonenumber = '+12056240076';
     $tophonenumber = "+".$_GET['phone'];
 
      $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(
@@ -57,7 +59,7 @@
             $tophonenumber, // The number of the phone receiving call
             'http://demo.twilio.com/welcome/voice/' // The URL Twilio will request when the call is answered
         );
-        echo '"<script type='text/javascript'>alert('Call started');</script>"';
+        echo '"<script type='text/javascript'>salert('Success','Call started','success');</script>"';
     } catch (Exception $e) {
         echo 'Error: ' . $e->getMessage();
-    }*/
+    }

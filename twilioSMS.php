@@ -3,9 +3,7 @@
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/gethelpnow-style.css"/>
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
+  <link rel="stylesheet" href="css files/sweetalert.css">
   <form method="POST"/>
 </head>
 <body>
@@ -30,6 +28,11 @@
 
 </div>     
 </center>
+  <script src="javascripts/sweetalert.min.js"></script>
+  <script src="javascripts/sweetalert.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
 </body>
 </html>
 <?php
@@ -37,7 +40,7 @@
 if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
 {
   // ==== Control Vars =======
-  $strFromNumber = "";
+  $strFromNumber = "+12056240076";
   $strToNumber = "+".$_GET['phone'];//get number from the twilio-sms.js file
   $strMsg = $_POST['SMS-body']; 
 
@@ -47,8 +50,8 @@ if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
   require_once ("Services/Twilio.php");
  
     // set our AccountSid and AuthToken - from www.twilio.com/user/account
-   $AccountSid = "";
-   $AuthToken = "";
+   $AccountSid = "AC352153773dfb04678b4a875f509169ee";
+   $AuthToken = "5d310051fdd83757fa6bbb157dbdc90a";
  
     // avoid tinyhttp exception
     $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(
@@ -66,7 +69,7 @@ if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
     );
 
         
-    echo "<script type='text/javascript'>alert('SMS Sent Successfully');</script>";
+    echo "<script type='text/javascript'>salert('Success!','SMS Sent Successfully','success');</script>";
   }
 
 

@@ -1,42 +1,10 @@
-<?php
-
-   session_start(); 
-   if(isset($_SESSION['email']))
-   {  
-     header("location: welcome.php"); 
-   }
-   
-   require 'dbconnect.php'; 
-   if (isset($_POST['email'])&&isset($_POST['password'])&&!empty($_POST['email'])&&!empty($_POST['password'])) 
-   {
-      //Prevent MYSQL Injection, added security
-      $email = mysqli_real_escape_string($connection, $_POST['email']);
-      $password = mysqli_real_escape_string($connection, $_POST['password']);
-      $email = stripslashes($email);
-      $password = stripslashes($password);
-
-      //Match given password with the saved one in db
-      $query = mysqli_query($connection,"CALL login('$password','$email')");
-      $rows = mysqli_num_rows($query);
-       if ($rows == 1) //password is correct
-       {
-          $_SESSION['email']=$email; 
-    
-          header("location: progressBar.php"); 
-       }
-       else 
-       {
-        echo "<script type='text/javascript'>alert('Invalid email or password');</script>";
-       }
-       mysqli_close($connection); 
-    }
-?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/loginAndRegistration.css">
-   <form action="login.php" method="POST"/>
+  <link rel="stylesheet" href="css files/sweetalert.css">
+  <form action="login.php" method="POST"/>
 </head>
 <body>
 <center>
@@ -65,5 +33,42 @@
     <a href="registration.php">Create Account Here</a>
   </div>
 </center>
+
+<script src="javascripts/sweetalert.min.js"></script>
+<script src="javascripts/sweetalert.js"></script>
+
 </body>
 </html>
+<?php
+
+   session_start(); 
+   if(isset($_SESSION['email']))
+   {  
+     header("location: welcome.php"); 
+   }
+   
+   require 'dbconnect.php'; 
+   if (isset($_POST['email'])&&isset($_POST['password'])&&!empty($_POST['email'])&&!empty($_POST['password'])) 
+   {
+      //Prevent MYSQL Injection, added security
+      $email = mysqli_real_escape_string($connection, $_POST['email']);
+      $password = mysqli_real_escape_string($connection, $_POST['password']);
+      $email = stripslashes($email);
+      $password = stripslashes($password);
+
+      //Match given password with the saved one in db
+      $query = mysqli_query($connection,"CALL login('$password','$email')");
+      $rows = mysqli_num_rows($query);
+       if ($rows == 1) //password is correct
+       {
+          $_SESSION['email']=$email; 
+    
+          header("location: progressBar.php"); 
+       }
+       else 
+       {
+        echo "<script type='text/javascript'>salert('Invalid email or password','Enter again','error');</script>";
+       }
+       mysqli_close($connection); 
+    }
+?>

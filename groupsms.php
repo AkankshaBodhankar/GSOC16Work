@@ -23,8 +23,8 @@
     }
 
     //set AccountSid and AuthToken from www.twilio.com/user/account
-    $AccountSid = "";
-    $AuthToken = "";
+    $AccountSid = "AC352153773dfb04678b4a875f509169ee";
+    $AuthToken = "5d310051fdd83757fa6bbb157dbdc90a";
 
     // avoid tinyhttp exception
     $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(
@@ -41,7 +41,7 @@
         $sms = $client->account->messages->sendMessage(
         // Change the 'From' number below to be a valid Twilio number 
         // that you've purchased, or the (deprecated) Sandbox number
-            "", 
+            "+12056240076", 
             // the number we are sending to - Any phone number
             $number,
             // the sms body

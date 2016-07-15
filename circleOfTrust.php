@@ -5,12 +5,14 @@
    {  
       header("location: login.php"); 
    }
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/circle-of-trust.css"/>
+  <link rel="stylesheet" href="css files/sweetalert.css">
 </head>
 <body>
 <?php
@@ -21,6 +23,7 @@
   <div>
     <h1 class="text">Circle of Trust</h1>
     <hr class="line">
+    <h2 class="text">My Trustees</h2>
   </div>
 
   <div>
@@ -61,6 +64,9 @@
 
 <script type="text/javascript" src="javascripts/popup.js"></script>
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="javascripts/sweetalert.js"></script>
+<script src="javascripts/sweetalert.min.js"></script>
+<script src="javascripts/closePopup.js"></script>
 <script type = "text/javascript" src="javascripts/circleOfTrustMessage1.js"></script>
 <script type = "text/javascript" src="javascripts/circleOfTrustMessage2.js"></script>
 <script type = "text/javascript" src="javascripts/circleOfTrustMessage3.js"></script>

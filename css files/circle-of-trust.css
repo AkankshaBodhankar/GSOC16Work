@@ -7,7 +7,6 @@ body {
 	margin-top: 200px;
 	position: absolute;
 }
-
 /* The Close Button in popup*/
 .close {
     color: #ffffff;
@@ -23,24 +22,23 @@ body {
 }
 
 .icons-container .icons-row {
-	margin: 64px;	
+	margin: 50px;	
 }
 .icons-container .icons-row img {
 	cursor: pointer;
-	margin:0 64px;
+	margin:0 50px;
 }
 #ic-edit{
 	margin: 0 700px 0 0px;
 }
 .inputs input {
-	
 	background-color: #ffffff;
 	border: 3px solid #2db58f;
 	color: #2db58f;
-	font-size: 20px;
+	font-size: 15px;
 	height: 100%;
 	margin: 10px;
-	padding: 20px;	
+	padding: 10px;	
 	width: 500px;	
 }
 

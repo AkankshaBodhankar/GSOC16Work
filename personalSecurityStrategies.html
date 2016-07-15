@@ -1,0 +1,42 @@
+<?php
+   
+   session_start();
+   if(!isset($_SESSION['email']))
+   {  
+      header("location: login.php"); 
+   }
+   
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PersonalSecurityStrategies</title>
+  <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
+</head>
+<body>
+<?php
+     include('menu.php');
+?>
+<center>
+<div class="window">
+  <div>
+    <h1 class="text">Personal Security Strategies</h1>
+    <hr class="line">
+  </div>
+
+  <div>
+  <table class="table">
+    <tr>
+      <td class="block">
+        <p>Content1...</p>
+      </td>
+      <td class="block">
+        <p>Content 2...</p>
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>     
+</center>
+</body>
+</html>

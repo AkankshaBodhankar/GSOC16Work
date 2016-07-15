@@ -16,9 +16,9 @@
     <li>
       <h3>Safety Tools</h3>
       <ul>
-        <li><a href="#">Safety Tools Main</a></li>
-        <li><a href="#">Personal Security Strategies</a></li>
-        <li><a href="#">RADAR</a></li>
+        <li><a href="safetyTools1.html">Safety Tools Main</a></li>
+        <li><a href="personalSecurityStrategies.html">Personal Security Strategies</a></li>
+        <li><a href="radar.html">RADAR</a></li>
         <li><a href="#">Coping with Unwanted Attention Startegies</a></li>
         <li><a href="#">Commonalities of Sexual Predators</a></li>
         <li><a href="#">Bystander Intervention</a></li>

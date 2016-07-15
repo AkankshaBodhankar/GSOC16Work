@@ -1,51 +1,9 @@
-<?php
-
-   session_start();
-   if(isset($_SESSION['email']))
-   {  
-      header("location: welcome.php"); 
-   }
-   require 'dbconnect.php';
-   if(isset($_POST['email'])&&isset($_POST['uname'])&&isset($_POST['password'])&&isset($_POST['host_country']))
-   {
-    
-      $sql="CALL dupemail('$_POST[email]')";
-      $result = mysqli_query($connection,$sql);
-      $connection -> next_result(); //used when there are multiple procedure calls, use after ecah procedure call
-
-      if(mysqli_num_rows($result)>=1) //check if it is a duplicate email
-      {
-         echo "<script type='text/javascript'>alert('User with this email already exists');</script>";
-      }
-      else
-      {
-        $email = $_POST['email'];
-        $newUser="CALL registration('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')"; //inserts into the user table
-
-        if(mysqli_query($connection,$newUser))
-        {//if successfully added user then add comrades of user
-            $connection->next_result();
-            for($i=1;$i<=6;$i++)
-            {
-              $addcomrade = "CALL addcomrade($i,'$email')";
-              mysqli_query($connection,$addcomrade);
-              $connection->next_result();
-            }
-
-            header('Location: login.php');
-        }
-        else
-          echo "<script type='text/javascript'>alert('Error in adding user');</script>";
-      }
-      mysqli_close($connection); 
-   }
-   
-?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/loginAndRegistration.css">
+  <link rel="stylesheet" href="css files/sweetalert.css">
   <form action="registration.php" method="POST" onsubmit="return validate()" />
   <script type="text/javascript" src="javascripts/validation-v12.js"></script>
 </head>
@@ -85,5 +43,54 @@
     <a href="#">This is a secure portal</a>
   </div>
 </center>
+
+<script src="javascripts/sweetalert.min.js"></script>
+<script src="javascripts/sweetalert.js"></script>
+
 </body>
 </html>
+<?php
+
+   session_start();
+   if(isset($_SESSION['email']))
+   {  
+      header("location: welcome.php"); 
+   }
+   require 'dbconnect.php';
+   if(isset($_POST['email'])&&isset($_POST['uname'])&&isset($_POST['password'])&&isset($_POST['host_country']))
+   {
+    
+      $sql="CALL dupemail('$_POST[email]')";
+      $result = mysqli_query($connection,$sql);
+      $connection -> next_result(); //used when there are multiple procedure calls, use after ecah procedure call
+
+      if(mysqli_num_rows($result)>=1) //check if it is a duplicate email
+      {
+         echo "<script type='text/javascript'>salert('Oops','User with this email already exists','error');</script>";
+      }
+      else
+      {
+        $email = $_POST['email'];
+        $newUser="CALL registration('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')"; //inserts into the user table
+
+        if(mysqli_query($connection,$newUser))
+        {//if successfully added user then add comrades of user
+            $connection->next_result();
+            for($i=1;$i<=6;$i++)
+            {
+              $addcomrade = "CALL addcomrade($i,'$email')";
+              mysqli_query($connection,$addcomrade);
+              $connection->next_result();
+            }
+            echo "<script>salert('Success','Registered Successfully','success');
+                   setTimeout(function () {
+                   window.location.href = 'login.php';},2000);
+                  </script>";
+        }
+        else
+          echo "<script type='text/javascript'>salert('Oops','Error in adding user','error');</script>";
+      }
+      mysqli_close($connection); 
+   }
+   
+?>
