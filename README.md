@@ -1,7 +1,7 @@
 
 # GSOC16Work
 
-## FirstAide - PCSA(Peace Corps Safety App) for Web 
+## FirstAide - PCSA(Peace Corps Safety App) Web App
 
 The project repo of PCSA-Web : [PCSA-web repo](https://github.com/systers/PCSA-web)
 
