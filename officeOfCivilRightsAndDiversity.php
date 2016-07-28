@@ -38,15 +38,16 @@
    <!-- Popup for contact Now -->
   <div id="popup-cnt" class="popup">
     <div class="popup-content">
-      <span id="close-cnt" class="close">×</span>
+      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Contact Office of Civil Rights and Diversity via</h3>
-      <button id="call" class="popup-button" onclick="send_sms('2026922139')">Voice Call</button>
+      <button id="call" class="popup-button" onclick="make_call('2026922915')">Voice Call</button>
       <button id="msg" class="popup-button" onclick="send_sms('2026922139')">Send Message</button>
     </div>
   </div>
 </div><!--closing div for window-->
 </center>
 <script type="text/javascript" src="javascripts/popup.js"></script>
+<script type="text/javascript" src="javascripts/twilio-call.js"></script>
 <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
 </body>
 </html>

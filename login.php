@@ -4,7 +4,7 @@
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/loginAndRegistration.css">
   <link rel="stylesheet" href="css files/sweetalert.css">
-  <form action="login.php" method="POST"/>
+  <form method="POST"/>
 </head>
 <body>
 <center>

@@ -9,7 +9,7 @@
   <script src="javascripts/sweetalert.min.js"></script>
   <script src="javascripts/sweetalert.js"></script>
 
-  <form method="POST" action="editComrades.php">
+  <form method="POST">
 </head>
 <body>
 <?php
@@ -74,6 +74,7 @@
             $connection -> next_result(); 
           }
           $nochange = 0;
+          $empty = 0;
           for($i=1;$i<=6;$i++)
           {
             $id = 'comrade'.$i;
@@ -81,8 +82,12 @@
       
             if($phno==$phnos[$i])
               $nochange++;
+            if($phno==NULL)
+              $empty++;
           }
-          if($nochange==6)
+          if($empty==6)
+            echo "<script>salert('No Phone numbers registered','Please enter data','');</script>";
+          else if($nochange==6)
             echo "<script>salert('No changes Detected','Data was not updated','error');</script>";
           else
             echo "<script>salert('Success','Data was updated','success');</script>";

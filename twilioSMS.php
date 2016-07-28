@@ -40,7 +40,7 @@
 if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
 {
   // ==== Control Vars =======
-  $strFromNumber = "";
+  $strFromNumber = "+12056240076";
   $strToNumber = "+".$_GET['phone'];//get number from the twilio-sms.js file
   $strMsg = $_POST['SMS-body']; 
 
@@ -50,8 +50,8 @@ if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
   require_once ("Services/Twilio.php");
  
     // set our AccountSid and AuthToken - from www.twilio.com/user/account
-   $AccountSid = "";
-   $AuthToken = "";
+   $AccountSid = "AC352153773dfb04678b4a875f509169ee";
+   $AuthToken = "5d310051fdd83757fa6bbb157dbdc90a";
  
     // avoid tinyhttp exception
     $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(

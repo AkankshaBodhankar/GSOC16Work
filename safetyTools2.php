@@ -26,7 +26,7 @@
   </div>
 
   <div id="bw-arrow">
-    <a href="safetyTools1.html">
+    <a href="safetyTools1.php">
       <img src="images/bw-arrow.png" style="height: 50px; width: 50px;">
     </a>
   </div>

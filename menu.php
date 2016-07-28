@@ -6,29 +6,29 @@
 </head>
 <body>
 <div id="accordian">
-<ul>
+<ul class="ul-menu">
   <li>
     <h2><img src="images/PClogoWhite.png"/><a href="welcome.php">FirstAide</a></h2>
-    <hr>
-    <h3><a href="getHelpNow.html">Get Help Now</a></h3>
+    <hr id="line">
+    <h3><a href="getHelpNow.php">Get Help Now</a></h3>
     <h3><a href="circleOfTrust.php">Circle of Trust</a></h3>
   </li>
     <li>
       <h3>Safety Tools</h3>
-      <ul>
-        <li><a href="safetyTools1.html">Safety Tools Main</a></li>
-        <li><a href="personalSecurityStrategies.html">Personal Security Strategies</a></li>
-        <li><a href="radar.html">RADAR</a></li>
-        <li><a href="#">Coping with Unwanted Attention Startegies</a></li>
-        <li><a href="#">Commonalities of Sexual Predators</a></li>
-        <li><a href="#">Bystander Intervention</a></li>
-        <li><a href="#">Safety Plan Basics</a></li>
-        <li><a href="#">Safety Plan Worksheet</a></li>
+      <ul class="ul-menu">
+        <li><a href="safetyTools1.php">Safety Tools Main</a></li>
+        <li><a href="personalSecurityStrategies.php">Personal Security Strategies</a></li>
+        <li><a href="radar.php">RADAR</a></li>
+        <li><a href="copingWithUnwantedAttentionStrategies.php">Coping with Unwanted Attention Startegies</a></li>
+        <li><a href="commonalitiesOfSexualPredators.php">Commonalities of Sexual Predators</a></li>
+        <li><a href="bystanderIntervention.php">Bystander Intervention</a></li>
+        <li><a href="safetyPlanBasics.php">Safety Plan Basics</a></li>
+        <li><a href="safetyPlanWorksheet.php">Safety Plan Worksheet</a></li>
       </ul>
     </li>
     <li>
       <h3>Support Services</h3>
-      <ul>
+      <ul class="ul-menu">
         <li><a href="#">Support Services Main</a></li>
         <li><a href="#">Benefits of Seeking Staff Support</a></li>
         <li><a href="#">Available Services after a Sexual Assault</a></li>
@@ -39,7 +39,7 @@
     </li>
     <li>
       <h3>Sexual Assault Awareness</h3>
-      <ul>
+      <ul class="ul-menu">
         <li><a href="#">Sexual Assault Main</a></li>
         <li><a href="#">Was it Sexual Assault</a></li>
         <li><a href="#">Sexual Assault Common Questions</a></li>
@@ -50,7 +50,7 @@
     </li>
     <li>
       <h3>Policies and Glossary</h3>
-      <ul>
+      <ul class="ul-menu">
         <li><a href="#">PeaceCorps Policy Summary Sheet</a></li>
         <li><a href="#">Glossary</a></li>
         <li><a href="#">Further Resources</a></li>

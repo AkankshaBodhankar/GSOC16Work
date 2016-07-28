@@ -40,7 +40,6 @@ body {
 }
 
 #bw-arrow {
-	margin-left: 0px;
 	margin-top: 250px;
 	position: absolute;
 }
@@ -77,6 +76,7 @@ body {
 }
 
 .line {
+	color: white;
     width: 50%;
 }
 

@@ -1,25 +1,24 @@
 body {
 	background-color: #05D197;
-	margin: 0;
+	margin: 0;	
 }
 
 .block {
 	background-color: #2db58f;
 	border: 3px solid #ffffff;
 	color: #ffffff;
-	cursor: pointer;
+	cursor: grab;
 	font-size: 20px;
-	height: 100%;
-	margin-top: 30px;
-	padding: 20px;	
-	width: 400px;	
+	height: 300px;
+	padding: 20px;
+	width: 500px;
 }
 
 #btn-table {
     border-collapse:separate;
     border-spacing:50px 50px;
-    width: 100%;
     height: 200px;
+    width: 100%;
 }
 
 .button {  /*The big green buttons*/ 
@@ -45,51 +44,69 @@ body {
 	position: absolute;
 }
 
+.dragscroll{
+	cursor: grab; 
+	cursor : -o-grab; 
+	cursor : -moz-grab; 
+	cursor : -webkit-grab; 
+	margin-top: 5%;
+	overflow: auto; 
+    overflow-x:hidden; 
+}
+
 #fw-arrow {
-	margin-left: 950px;
+	margin-left: 1020px;
 	margin-top: 250px;
 	position: absolute;
 }
 
-.fw-arrow1 {
-	margin-left: 1010px;
-	margin-top: 500px;
-	position: absolute;
+.greaterthan5-blocks-content {/*used for pages which have multiple blocks (>5)*/
+    border-collapse:separate;
+    border-spacing:50px 50px;
+    width: 270%;
 }
 
 .line {
+	color: white;
     width: 50%;
-}
-
-.small-block {
-	align-content: left;
-	background-color: #2db58f;
-	border: 3px solid #ffffff;
-	color: #ffffff;
-	cursor: pointer;
-	font-size: 20px;
-	height: 100px;
-	margin-top: 30px;
-	padding: 20px;	
-	width: 870px;	
-}
-
-.table {
-    border-collapse:separate;
-    border-spacing:50px 50px;
-    width: 100%;
-    height: 200px;
 }
 
 .text {
 	color: #ffffff;
-	font-style: bold;
+}
+
+.threeorfour-blocks-content{/*used for pages which have 2 blocks only*/
+	border-collapse:separate;
+    border-spacing:50px 50px;
+    width: 150%;
+}
+
+.two-blocks-content{/*used for pages which have 2 blocks only*/
+	border-collapse:separate;
+    border-spacing:50px 50px;
+    height: 500px;
+	overflow:scroll;
+	table-layout:fixed;
+}
+
+.ul-safetytools{
+	background-color: #2db58f;
+	color: #ffffff;
+	font-size: 20px;
+	width: 90%;
+	height: 80%;
+	overflow:scroll;
+	overflow-x: hidden;
+}
+
+.ul-safetytools li{
+	margin-top: 10px;
 }
 
 .window {
 	height: 100%;
 	margin-left: 20%;
-	padding: 1px 16px;
+	padding: 1px 16px;  
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -112,4 +129,22 @@ body {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #d3d3d3;
    font-size: 15px;
+}
+
+/*custom scrollbar for the app*/
+::-webkit-scrollbar {
+    width: 12px;
+	background-color: #F5F5F5;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #bdbdbd;
 }

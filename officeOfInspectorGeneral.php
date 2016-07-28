@@ -1,6 +1,6 @@
 <?php
    
-   session_start(); //php works in html file because we included .htaccess file
+   session_start(); 
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -38,7 +38,7 @@
    <!-- Popup for contact Now -->
   <div id="popup-cnt" class="popup">
     <div class="popup-content">
-      <span id="close-cnt" class="close">×</span>
+      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Contact Office of Inspector General via</h3>
       <button id="call" class="popup-button" onclick="make_call('2026922915')">Voice Call</button>
       <button id="msg" class="popup-button" onclick="send_sms('2026922915')">Send Message</button>

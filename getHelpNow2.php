@@ -26,7 +26,7 @@
   </div>
 
   <div id="bw-arrow">
-    <a href="getHelpNow.html">
+    <a href="getHelpNow.php">
       <img src="images/bw-arrow.png" style="height: 50px; width: 50px;">
     </a>
   </div>
@@ -35,18 +35,18 @@
   <table id="btn-table">
     <tr>
       <td>
-         <button class="button" onclick = "location.href='PCSaves.html';" id="bt-PCSaves" name="bt-PCSaves">PC Saves Anonymous Helpline</button>
+         <button class="button" onclick = "location.href='PCSaves.php';" id="bt-PCSaves" name="bt-PCSaves">PC Saves Anonymous Helpline</button>
       </td>
       <td>
-        <button class="button" onclick = "location.href='officeOfVictimAdvocacy.html';" id="bt-offVA" name="bt-offVA">Office of Victim Advocacy</button>
+        <button class="button" onclick = "location.href='officeOfVictimAdvocacy.php';" id="bt-offVA" name="bt-offVA">Office of Victim Advocacy</button>
       </td>
     </tr>
     <tr>
       <td>
-        <button class="button" id="bt-offIG" name="bt-offIG" onclick = "location.href='officeOfInspectorGeneral.html';" >Office of Inspector General</button>
+        <button class="button" id="bt-offIG" name="bt-offIG" onclick = "location.href='officeOfInspectorGeneral.php';" >Office of Inspector General</button>
       </td>
       <td>
-        <button class="button" id="bt-offCRD" name="bt-offCRD" onclick = "location.href='officeOfCivilRightsAndDiversity.html';" >Office of Civil Rights and Diversity</button>
+        <button class="button" id="bt-offCRD" name="bt-offCRD" onclick = "location.href='officeOfCivilRightsAndDiversity.php';" >Office of Civil Rights and Diversity</button>
       </td>
     </tr>
   </table>

@@ -38,7 +38,7 @@
   <!-- Popup for contact Now -->
   <div id="popup-cnt" class="popup">
     <div class="popup-content">
-      <span id="close-cnt" class="close">×</span>
+      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Contact PC Saves Anonymous Helpline via</h3>
       <button id="call" class="popup-button" onclick="make_call('0014088444357')">Voice Call</button>
       <button id="msg" class="popup-button" onclick="send_sms('0014088444357')">Send Message</button>

@@ -55,7 +55,7 @@
   	    <button class="button" id="bt-SARL" name="bt-SARL" onclick="openSARL()">Contact SARL</button>
   	  </td>
       <td>
-        <a href="getHelpNow2.html">
+        <a href="getHelpNow2.php">
           <img src="images/fw-arrow.png" style="height: 50px; width: 50px;">
         </a>
       </td>
@@ -66,7 +66,7 @@
   <!-- Popup for contact PCMO -->
   <div id="popup-PCMO" class="popup">
     <div class="popup-content">
-      <span id="close-PCMO" class="close">×</span>
+      <span id="close-PCMO" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Contact PCMO via</h3>
       <button id="PCMO-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
       <button id="PCMO-msg" class="popup-button" onclick="setnum(this.id)">Send Message</button>
@@ -76,7 +76,7 @@
   <!-- Popup for contact SSM -->
   <div id="popup-SSM" class="popup">
     <div class="popup-content">
-      <span id="close-SSM" class="close">×</span>
+      <span id="close-SSM" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Contact SSM via</h3>
       <button id="SSM-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
       <button id="SSM-msg" class="popup-button" onclick="setnum(this.id)">Send Message</button>
@@ -86,7 +86,7 @@
   <!-- Popup for contact SARL -->
   <div id="popup-SARL" class="popup">
     <div class="popup-content">
-      <span id="close-SARL" class="close">×</span>
+      <span id="close-SARL" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Contact SARL via</h3>
       <button id="SARL-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
       <button id="SARL-msg" class="popup-button" onclick="setnum(this.id)">Send Message</button>

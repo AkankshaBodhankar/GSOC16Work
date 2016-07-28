@@ -4,7 +4,7 @@
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/loginAndRegistration.css">
   <link rel="stylesheet" href="css files/sweetalert.css">
-  <form action="registration.php" method="POST" onsubmit="return validate()" />
+  <form method="POST" onsubmit="return validate()" />
   <script type="text/javascript" src="javascripts/validation-v12.js"></script>
 </head>
 <body>
@@ -56,6 +56,7 @@
    {  
       header("location: welcome.php"); 
    }
+   
    require 'dbconnect.php';
    if(isset($_POST['email'])&&isset($_POST['uname'])&&isset($_POST['password'])&&isset($_POST['host_country']))
    {

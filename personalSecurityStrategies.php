@@ -12,6 +12,10 @@
 <head>
   <title>PersonalSecurityStrategies</title>
   <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
+  
+  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
+    
+     <script type="text/javascript" src="dragscroll.js"></script>
 </head>
 <body>
 <?php
@@ -24,18 +28,19 @@
     <hr class="line">
   </div>
 
-  <div>
+  <div class="dragscroll">
   <table class="table">
     <tr>
       <td class="block">
-        <p>Content1...</p>
+        Content yet to be provided..  
       </td>
-      <td class="block">
-        <p>Content 2...</p>
+      <td class="dragscroll block">
+        Content yet to be provided...
       </td>
     </tr>
   </table>
   </div>
+
 </div>     
 </center>
 </body>

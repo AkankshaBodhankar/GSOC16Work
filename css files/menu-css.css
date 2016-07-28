@@ -57,11 +57,11 @@
 	list-style-type: none;
 }
 
-#accordian li.active ul {
+#accordian li.active .ul-menu {
 	display: block;
 }
 
-#accordian ul ul li a {
+#accordian .ul-menu .ul-menu li a {
 	color: white;
 	display: block;
 	font-size: 15px;
@@ -72,13 +72,13 @@
 	transition: all 0.15s;
 }
 
-#accordian ul ul li a:hover {
+#accordian .ul-menu .ul-menu li a:hover {
 	background: #ffd590;
 	border-left: 5px solid orange;
 }
 
 /*hide the non active LIs by default*/
-#accordian ul ul {
+#accordian .ul-menu .ul-menu {
 	display: none;
 }
 
@@ -105,7 +105,11 @@ li.last {
     overflow: hidden;
 }
 
-ul {
+#line {
+  color: white;
+}
+
+.ul-menu {
 	background-color: #FBC469;
 	height: 100%;
     list-style-type: none;
@@ -115,7 +119,7 @@ ul {
     width: 250px;    
 }
 
-ul ul li a {
+.ul-menu .ul-menu li a {
 	color: white;
 	display: block;
 	font-size: 11px;
@@ -126,6 +130,6 @@ ul ul li a {
 	transition: all 0.15s;
 }
 
-ul ul {
+.ul-menu .ul-menu {
 	display: none;
 }

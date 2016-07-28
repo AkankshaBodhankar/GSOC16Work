@@ -26,7 +26,7 @@
   </div>
 
    <div id="fw-arrow">
-    <a href="safetyTools2.html">
+    <a href="safetyTools2.php">
       <img src="images/fw-arrow.png" style="height: 50px; width: 50px;">
     </a>
   </div>
@@ -35,10 +35,10 @@
   <table id="btn-table">
     <tr>
       <td>
-         <button class="button" onclick = "location.href='personalSecurityStrategies.html';" id="bt-personalstrategies" name="bt-personalstrategies">Personal Security Strategies</button>
+         <button class="button" onclick = "location.href='personalSecurityStrategies.php';" id="bt-personalstrategies" name="bt-personalstrategies">Personal Security Strategies</button>
       </td>
       <td>
-        <button class="button" onclick = "location.href='radar.html';" id="bt-radar" name="bt-radar">RADAR</button>
+        <button class="button" onclick = "location.href='radar.php';" id="bt-radar" name="bt-radar">RADAR</button>
       </td>
     </tr>
     <tr>

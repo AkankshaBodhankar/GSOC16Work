@@ -51,7 +51,7 @@
    <!-- Popup for Request -->
   <div id="popup-cnt" class="popup">
     <div class="popup-content">
-      <span id="close-cnt" class="close">×</span>
+      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
       <h3 class="text">Select a Request</h3>
       <button id="msg" class="popup-button">Come Get me</button>
       <button id="msg2"  class="popup-button">Call I need an interruption</button>
