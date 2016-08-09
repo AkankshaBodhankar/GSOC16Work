@@ -52,12 +52,36 @@ The documentation can be found here
 
 ###How to Use CALL and SMS feature
 This project makes use of Twilio for sending SMS and making CALLS. Twilio is a third party platform which provides API in PHP for serving the purpose.
+SMS and Call had been used in:
+Get Help Now module
+Group SMS in :
+Circle of Trust module
+
 Read more about Twilio here: [Twilio](https://www.twilio.com/)
 
-Get started with SMS and Call by creating an Account on Twilio. Use the Account SID and Token provided by Twilio for your account and paste them in the twilioSMS.php, twilioCall.php and groupsms.php. Also, a free number will be provided by Twilio, use that as fromNumber in all the files. 
+##Steps to enable Twilio in your localhost
+1. Get started with SMS and Call by creating an Account on Twilio here : [Twilio Register](https://www.twilio.com/try-twilio)
+2. Setting Account SID and Token
+   Take the Account SID and Token provided by Twilio here [Your Twilio Credentials](https://www.twilio.com/console). Paste them at the correct places in  the twilioSMS.php, twilioCall.php and groupsms.php files
+3. Setting From Number
+   Get a phone number from Twilio here: [Twilio phone number](https://www.twilio.com/console/phone-numbers/dashboard). Use this as the from number in the files twilioSMS.php, twilioCall.php and groupsms.php
+4. Setting To Numbers :
+   You can send a SMS or make a Call to a Twilio verified number only
 
+   Procedure to verify a number in Twilio
+   1. Go to (https://www.twilio.com/console/phone-numbers/dashboard)
+   2. Then on the left side vertical menu select Verified Caller IDs
+   3. Click the + symbol and verify a number
+   
+   After getting the numbers verified it's time to use this numbers to test the feature
+   While adding the numbers make sure you enter the country code as well else, it won't work.
+   #####Use in Get Help Now module
+   Go to javascripts/getHelpNowPhNo.js -> Replace the sample numbers to your verified numbers->Make Call or Send SMS from the App
+   #####Use in Circle of Trust module
+   Open the app->Go to Circle of Trust from the menu->Click edit icon->Add your verified numbers there->Submit
+   Now go back to Circle of Trust->Click Help Me icon->Select a message->An alert pops out saying 'Success' once messages are sent
 
-
-
-
-
+References : 
+[Tutorial for SMS](https://www.youtube.com/watch?v=jZPeNfLD5Yc)
+[Tutorial for Group SMS](https://www.youtube.com/watch?v=G4oluQf_7S4)
+   
