@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: Implementation of PC Saves anonymous helpline of 'Get Help Now'
+*/   
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -10,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PCSaves</title>
+  <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/gethelpnow-style.css"/>
 </head>
 <body>
@@ -24,10 +27,9 @@
     <hr class="line">
   </div>
 
-  <div> 
-    <button class="small-button" id="bt-cntPC" name="bt-cntPC" onclick="openPopup()">Contact Now</button>
-  </div>
-
+  <!--opens popup to contact via SMS or Call-->
+  <button class="small-button" id="bt-cntPC" name="bt-cntPC" onclick="openPopup()">Contact Now</button>
+  
   <div class="block">
     <p>
       The PC SAVES Helpline provides anonymous, confidential crisis intervention, support, and information via a call, text, or online chat to Peace Corps Volunteers and Trainees. All options are staffed by trained professionals not affiliated with Peace Corps, available 24/7.  No personally identifying information will be collected.
@@ -38,16 +40,17 @@
   <!-- Popup for contact Now -->
   <div id="popup-cnt" class="popup">
     <div class="popup-content">
-      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
+      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height: 15px;width: 15px;"></span>
       <h3 class="text">Contact PC Saves Anonymous Helpline via</h3>
       <button id="call" class="popup-button" onclick="make_call('0014088444357')">Voice Call</button>
       <button id="msg" class="popup-button" onclick="send_sms('0014088444357')">Send Message</button>
     </div>
   </div>
-</div>     
+
+</div><!--closing div of window-->  
 </center>
-<script type="text/javascript" src="javascripts/popup.js"></script>
-<script type="text/javascript" src="javascripts/twilio-sms.js"></script>
-<script type="text/javascript" src="javascripts/twilio-call.js"></script>
+  <script type="text/javascript" src="javascripts/popup.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-call.js"></script>
 </body>
 </html>

@@ -1,6 +1,10 @@
 <?php
-   
-   session_start();
+/*
+  Created by Akanksha
+  Desc: Progress Bar after welcome page  
+*/   
+   if(!isset($_SESSION))
+     session_start();
    if(isset($_SESSION['welcomeopened'])) //session is set in welcome page, to prevent cmng to this page after logging in
    {  
      header("location: welcome.php"); 
@@ -24,8 +28,8 @@
       <h2 class="text">A Confidentiality Safety Resource for Peace Corps Volunteers</h2>
   </div>
 
-  <div id="Progress">
-    <div id="Bar"></div>
+  <div id="progress">
+    <div id="bar"></div>
   </div>
 </center>
 <script type="text/javascript" src="javascripts/progressBar.js"></script>

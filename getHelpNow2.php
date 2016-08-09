@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: Form to navigate to PCSaves, Office of victim advocacy, Ofiice of inspector general and Office of civil rights and services
+*/
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -30,7 +33,7 @@
       <img src="images/bw-arrow.png" style="height: 50px; width: 50px;">
     </a>
   </div>
-
+  <!--Navigate buttons-->
   <div id="div1">
   <table id="btn-table">
     <tr>
@@ -51,7 +54,6 @@
     </tr>
   </table>
   </div>
-
 </div>     
 </center>
 </body>

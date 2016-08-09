@@ -1,3 +1,6 @@
+/*Created by Akanksha
+  Desc: Popup js for ContactSSM
+*/
 function openSSM()
 {
   var popup = document.getElementById('popup-SSM');

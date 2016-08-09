@@ -1,6 +1,10 @@
 <?php
+/*Created by Akanksha
+  Desc: Implementation of Commonalities of sexual predators of 'Safety tools' 
+*/
    
-   session_start();
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -13,9 +17,6 @@
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
   <link rel="stylesheet" type="text/css" href="design.css"/>
-
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script><!--must be loaded first-->
-  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </head>
 <body>
 <?php
@@ -28,7 +29,7 @@
     <hr class="line">
   </div>
 
-  <div class="dragscroll">
+  <div class="dragscroll"><!--for horizontal drag scrolling-->
   <table class="threeorfour-blocks-content">
     <tr>
       <td class="block">
@@ -99,8 +100,9 @@
     </tr>
   </table>
   </div><!--closing div of dragscroll-->
-
 </div><!--closing div of window-->
 </center>
+  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script><!--must be loaded first always-->
+  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
-/*jQuery for menu*/
+/*Created by Akanksha
+  Desc: jQuery for menu
+*/
 $(document).ready(function(){
 	$("#accordian h3").click(function(){
 		//slide up all the link lists

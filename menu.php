@@ -1,3 +1,15 @@
+<?php
+/*Created by Akanksha
+  Desc: Accordian side menu for the app
+*/
+  if(!isset($_SESSION))
+    session_start();
+  if(!isset($_SESSION['email']))
+  {
+    header("location:login.php");
+  }
+  
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +39,7 @@
       </ul>
     </li>
     <li>
-      <h3>Support Services</h3>
+      <h3>Support Services</h3><!--Replace # with the php files-->
       <ul class="ul-menu">
         <li><a href="#">Support Services Main</a></li>
         <li><a href="#">Benefits of Seeking Staff Support</a></li>
@@ -71,9 +83,7 @@
        </h3>
     </li>
 </div>
-
-<script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="javascripts/menu.js"></script>
-  
+  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="javascripts/menu.js"></script>  
 </body>
 </html>

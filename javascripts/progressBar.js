@@ -1,5 +1,8 @@
+/*Created by Akanksha
+  Desc: Creates a progress bar which is displayed after login 
+*/
 function move() {
-  var elem = document.getElementById("Bar");   
+  var elem = document.getElementById("bar");   
   var width = 0;
   var id = setInterval(frame, 10);
   function frame() {

@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: Form for Contact PCMO, Contact SSM and Contact SARL of 'Get Help now'
+*/
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -19,7 +22,6 @@
 ?>
 <center>
 <div class="window">
-
   <div>
     <h1 class="text">Get Help Now</h1>
     <hr class="line">
@@ -39,8 +41,8 @@
       </tr>
     </table>
   </div><!--closing div for location-->
-
-  <div>
+  
+  <!--Buttonf for each sub-feature-->
   <table id="btn-table">
   	<tr>
   	  <td>
@@ -61,14 +63,13 @@
       </td>
   	</tr>
   </table>
-  </div><!--closing for table with buttons div-->
 
   <!-- Popup for contact PCMO -->
   <div id="popup-PCMO" class="popup">
     <div class="popup-content">
-      <span id="close-PCMO" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
+      <span id="close-PCMO" class="close"><img src="images/close-button.png" style="height: 15px;width: 15px;"></span>
       <h3 class="text">Contact PCMO via</h3>
-      <button id="PCMO-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
+     <button id="PCMO-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
       <button id="PCMO-msg" class="popup-button" onclick="setnum(this.id)">Send Message</button>
     </div>
   </div>
@@ -76,7 +77,7 @@
   <!-- Popup for contact SSM -->
   <div id="popup-SSM" class="popup">
     <div class="popup-content">
-      <span id="close-SSM" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
+      <span id="close-SSM" class="close"><img src="images/close-button.png" style="height: 15px;width: 15px;"></span>
       <h3 class="text">Contact SSM via</h3>
       <button id="SSM-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
       <button id="SSM-msg" class="popup-button" onclick="setnum(this.id)">Send Message</button>
@@ -86,7 +87,7 @@
   <!-- Popup for contact SARL -->
   <div id="popup-SARL" class="popup">
     <div class="popup-content">
-      <span id="close-SARL" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
+      <span id="close-SARL" class="close"><img src="images/close-button.png" style="height: 15px;width:px;"></span>
       <h3 class="text">Contact SARL via</h3>
       <button id="SARL-call" class="popup-button" onclick="setnum(this.id)">Voice Call</button>
       <button id="SARL-msg" class="popup-button" onclick="setnum(this.id)">Send Message</button>
@@ -95,14 +96,12 @@
 
 </div><!--closing div for window-->
 </center>
-
-<script type="text/javascript" src= "javascripts/changeloc.js"></script>
-<script type="text/javascript" src="javascripts/PCMOpopup.js"></script>
-<script type="text/javascript" src="javascripts/SSMpopup.js"></script>
-<script type="text/javascript" src="javascripts/SARLpopup.js"></script>
-<script type="text/javascript" src="javascripts/twilio-sms.js"></script>
-<script type="text/javascript" src="javascripts/twilio-call.js"></script>
-<script type="text/javascript" src="javascripts/gethelpnowPhNo.js"></script>
-
+  <script type="text/javascript" src= "javascripts/changeloc.js"></script>
+  <script type="text/javascript" src="javascripts/PCMOpopup.js"></script>
+  <script type="text/javascript" src="javascripts/SSMpopup.js"></script>
+  <script type="text/javascript" src="javascripts/SARLpopup.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-call.js"></script>
+  <script type="text/javascript" src="javascripts/gethelpnowPhNo.js"></script>
 </body>
 </html>

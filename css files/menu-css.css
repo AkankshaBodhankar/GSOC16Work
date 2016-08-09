@@ -1,3 +1,6 @@
+/* Created by Akanksha
+   Desc: CSS for the vertical accordian menu
+*/
 #accordian {
 	background: #ffd590;
 	color: white;
@@ -9,16 +12,6 @@
     height: 100%
 }
 
-#accordian h2 img { 
-   float:left;
-   height: 30px; 
-   margin-bottom:10px;
-   margin-left:45px;
-   margin-top:5px; 
-   padding: 9px; 
-   width: 30px;
-}
-
 #accordian h2 a {
 	background: #ffd590; 
 	background: linear-gradient(#ffd590, #ffd590);
@@ -27,6 +20,16 @@
 	font-size: 25px;
 	font-style: bold;	
 	line-height: 34px;	
+}
+
+#accordian h2 img { 
+   float:left;
+   height: 30px; 
+   margin-bottom:10px;
+   margin-left:45px;
+   margin-top:5px; 
+   padding: 9px; 
+   width: 30px;
 }
 
 #accordian h3 {
@@ -81,7 +84,7 @@
 #accordian .ul-menu .ul-menu {
 	display: none;
 }
-
+/*CSS for list*/
 li a {
     display: block;
     color: #000;
@@ -90,7 +93,7 @@ li a {
 }
 
 li a.active {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
 }
 
@@ -100,7 +103,7 @@ li a:hover:not(.active) {
 }
 
 li.last {
-	background-color:red;
+	background-color: red;
     float: none;
     overflow: hidden;
 }
@@ -108,9 +111,9 @@ li.last {
 #line {
   color: white;
 }
-
+/*CSS for ul of menu*/
 .ul-menu {
-	background-color: #FBC469;
+	background-color: #fbc469;
 	height: 100%;
     list-style-type: none;
     margin: 0;

@@ -1,3 +1,6 @@
+<!--Created by Akanksha
+    Desc : Login form and also code for checking validating login credentials
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,7 @@
     <hr id="line">
     <h2 class="text">A Confidentiality Safety Resource for Peace Corps Volunteers</h2>
   </div>
-
+  <!--form for login-->
   <div class="div">
   <table class="tables">
     <tr>
@@ -41,7 +44,8 @@
 </html>
 <?php
 
-   session_start(); 
+   if(!isset($_SESSION))
+     session_start(); 
    if(isset($_SESSION['email']))
    {  
      header("location: welcome.php"); 

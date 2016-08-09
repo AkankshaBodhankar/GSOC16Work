@@ -1,0 +1,40 @@
+$(document).ready(function() {
+  
+            $("#msg1").click(function(event){
+               $.post( 
+                  "groupsms.php",
+                  { msg: "Come and get me.I need help getting home safely.Call ASAP to get my Location.Message sent through First Aide's Circle of Trust" },
+                  function(data) {
+                    salert('Success','Message has been sent to your comrades','success');
+                    closePopup(); 
+                    
+                  }
+               );
+          
+            });
+
+              $("#msg2").click(function(event){
+               $.post( 
+                  "groupsms.php",
+                  { msg: "Call and pretend you need me.I need an interruption.Message sent through First Aide's Circle of Trust" },
+                  function(data) {
+                    salert('Success','Message has been sent to your comrades','success'); 
+                    closePopup();
+                  }
+               );
+          
+            });
+
+              $("#msg3").click(function(event){
+               $.post( 
+                  "groupsms.php",
+                  { msg: "I need to talk.Message sent through First Aide's Circle of Trust" },
+                  function(data) {
+                    salert('Success','Message has been sent to your comrades','success'); 
+                    closePopup();
+                  }
+               );
+          
+            });
+        
+         });

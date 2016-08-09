@@ -1,3 +1,6 @@
+/*Created by Akanksha
+  Desc: Vlidation for Registration
+*/
 function validate()
 {
   var invalid = 0;//keeps count of invalid fields

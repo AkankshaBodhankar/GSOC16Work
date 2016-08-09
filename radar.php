@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: RADAR of 'Safety Tools'
+*/
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -13,11 +16,6 @@
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
   <link rel="stylesheet" href="css files/sweetalert.css">
-
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script><!--must be loaded first-->
-  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
-  <script src="javascripts/sweetalert.min.js"></script>
-  <script src="javascripts/sweetalert.js"></script>
 </head>
 <body>
 <?php
@@ -29,9 +27,9 @@
     <h1 class="text">RADAR</h1>
     <hr class="line">
   </div>
-
+  <!--Horizontally scrollable content-->
   <div class="dragscroll">
-  <table class="greaterthan5-blocks-content">
+  <table class="greaterthan5-blocks-content"><!--more than 5 blocks i.e, <td>'s here-->
     <tr>
       <td class="block">
         <p>
@@ -82,14 +80,18 @@
     </tr>
   </table>
   </div><!--closing div of dragscroll-->
-
 </div> <!--closing div of window-->
 </center>
-  <script>
+  <script src="javascripts/sweetalert.min.js"></script>
+  <script src="javascripts/sweetalert.js"></script>
+  <!--swal uses sweetalert scripts, Used to display alert-->
+  <script type="text/javascript">
     swal(
       {title: "Drag to move!", 
        text: "You can move right or left to scroll through content", 
        imageUrl: "images/drag_hand.png" });
   </script>
+  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script><!--must be loaded first-->
+  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </body>
 </html>

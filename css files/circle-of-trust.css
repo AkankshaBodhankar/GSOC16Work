@@ -1,3 +1,9 @@
+/* Created by Akanksha
+   Desc: Style for Circle of Trust
+   Used in following php files
+   editComrades
+   circleOfTrust
+*/
 body {
 	background-color: #05d197;
 	margin: 0;
@@ -20,17 +26,20 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-
+/*Icons style present in circleOfTrust.php*/
 .icons-container .icons-row {
 	margin: 50px;	
 }
+
 .icons-container .icons-row img {
 	cursor: pointer;
 	margin:0 50px;
 }
+
 #ic-edit{
 	margin: 0 700px 0 0px;
 }
+
 .inputs input {
 	background-color: #ffffff;
 	border: 3px solid #2db58f;
@@ -61,7 +70,7 @@ body {
     width: 100%; 
     z-index: 1; /*On top of screen*/
 }
-
+/*Style for popup when Help me clicked*/
 .popup-button { /*buttons in contact popup*/
 	background-color: #2db58f;
 	border-width: 3px;
@@ -87,7 +96,7 @@ body {
     width: 30%;
 }
 
-.small-button {
+.small-button {/*submit button in editComrades.php*/
 	background-color: #2db58f;
 	border-width: 3px;
 	border-color: #ffffff;
@@ -98,7 +107,6 @@ body {
 	margin-top: 20px;
 	text-align: center;
 	width: 30%;	
-
 }
 
 .small-button:hover {
@@ -108,9 +116,8 @@ body {
 #table {
     border-collapse:separate;
     border-spacing:50px 50px;
-   /* display: inline-block;*/
-    width: 100%;
     height: 200px;
+    width: 100%;
 }
 
 .text {
@@ -125,24 +132,42 @@ body {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #2db58f;
+    color: #2db58f;
     font-size: 15px;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #2db58f;
+   color: #2db58f;
    font-size: 15px;
    opacity:  1;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #2db58f;
+   color: #2db58f;
    font-size: 15px;
    opacity:  1;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #2db58f;
+   color: #2db58f;
    font-size: 15px;
+}
+
+/*custom scrollbar for the app*/
+::-webkit-scrollbar {
+	background-color: #f5f5f5;
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+	border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+	background-color: #bdbdbd;
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 }
 

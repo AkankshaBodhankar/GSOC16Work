@@ -1,11 +1,13 @@
+<!--Created by Akanksha
+    Desc: Registration form and code to register the user
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/loginAndRegistration.css">
   <link rel="stylesheet" href="css files/sweetalert.css">
-  <form method="POST" onsubmit="return validate()" />
-  <script type="text/javascript" src="javascripts/validation-v12.js"></script>
+  <form method="POST" onsubmit="return validate()" /><!--validations for form fields entered js file- validation-v12.js-->
 </head>
 <body>
 <center>
@@ -14,7 +16,7 @@
     <hr id="line">
     <h2 class="text">A Confidentiality Safety Resource for Peace Corps Volunteers</h2>
   </div>
-
+  <!--form fields for registration-->
   <div class="div-reg">
     <table class="tables">
        <tr>
@@ -35,7 +37,7 @@
        </tr>
     </table>
   </div>
-
+  <!--submit button-->
   <div class="div-reg">
      <input class="button" type="submit" value="Create Account">
     <br><br>
@@ -43,21 +45,22 @@
     <a href="#">This is a secure portal</a>
   </div>
 </center>
-
-<script src="javascripts/sweetalert.min.js"></script>
-<script src="javascripts/sweetalert.js"></script>
-
+  <script type="text/javascript" src="javascripts/validation-v12.js"></script>
+  <script src="javascripts/sweetalert.min.js"></script>
+  <script src="javascripts/sweetalert.js"></script>
 </body>
 </html>
 <?php
-
-   session_start();
+   
+   if(!isset($_SESSION))
+     session_start();
    if(isset($_SESSION['email']))
    {  
       header("location: welcome.php"); 
    }
    
    require 'dbconnect.php';
+   
    if(isset($_POST['email'])&&isset($_POST['uname'])&&isset($_POST['password'])&&isset($_POST['host_country']))
    {
     
@@ -75,11 +78,11 @@
         $newUser="CALL registration('$_POST[email]','$_POST[uname]','$_POST[password]','$_POST[host_country]')"; //inserts into the user table
 
         if(mysqli_query($connection,$newUser))
-        {//if successfully added user then add comrades of user
+        {//if successfully added user then add comrades of user with null phone numbers
             $connection->next_result();
             for($i=1;$i<=6;$i++)
             {
-              $addcomrade = "CALL addcomrade($i,'$email')";
+              $addcomrade = "CALL addcomrade($i,'$email')";//adds comrades into comrade table
               mysqli_query($connection,$addcomrade);
               $connection->next_result();
             }

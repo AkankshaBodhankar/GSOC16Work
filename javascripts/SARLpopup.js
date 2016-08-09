@@ -1,3 +1,6 @@
+/*Created by Akanksha
+  Desc: Popup js for ContactSARL
+*/
 function openSARL()
 {
   var popup = document.getElementById('popup-SARL');

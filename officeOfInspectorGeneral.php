@@ -1,6 +1,9 @@
 <?php
-   
-   session_start(); 
+/*Created by Akanksha
+  Desc: Implementation of office of inspector general of 'Get Help now'
+*/  
+   if(!isset($_SESSION))
+     session_start(); 
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -23,10 +26,9 @@
     <h1 class="text">Office of Inspector General</h1>
     <hr class="line">
   </div>
-
-  <div> 
-    <button class="small-button" id="bt-cntnw" name="bt-cntnw" onclick="openPopup()">Contact Now</button>
-  </div>
+  
+  <!--opens popup to contact via SMS or Call-->
+  <button class="small-button" id="bt-cntnw" name="bt-cntnw" onclick="openPopup()">Contact Now</button>
 
   <div class="block">
     <p>
@@ -38,18 +40,17 @@
    <!-- Popup for contact Now -->
   <div id="popup-cnt" class="popup">
     <div class="popup-content">
-      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height:30px;width:30px;"></span>
+      <span id="close-cnt" class="close"><img src="images/close-button.png" style="height: 15px;width: 15px;"></span>
       <h3 class="text">Contact Office of Inspector General via</h3>
       <button id="call" class="popup-button" onclick="make_call('2026922915')">Voice Call</button>
       <button id="msg" class="popup-button" onclick="send_sms('2026922915')">Send Message</button>
     </div>
   </div>
 
-
-</div>     
+</div><!--closing div of window-->   
 </center>
-<script type="text/javascript" src="javascripts/popup.js"></script>
-<script type="text/javascript" src="javascripts/twilio-sms.js"></script>
-<script type="text/javascript" src="javascripts/twilio-call.js"></script>
+  <script type="text/javascript" src="javascripts/popup.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
+  <script type="text/javascript" src="javascripts/twilio-call.js"></script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: Navigation for features of safety tools(part2)
+*/ 
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -30,25 +33,22 @@
       <img src="images/bw-arrow.png" style="height: 50px; width: 50px;">
     </a>
   </div>
-
-  <div>
+  <!--Navigation buttons-->
   <table id="btn-table">
   	<tr>
   	  <td>
-  	    <button class="button" id="bt-bystander" name="bt-bystander" onclick="">Bystander Intervention</button>
+  	    <button class="button" id="bt-bystander" name="bt-bystander" onclick="location.href='bystanderIntervention.php';">Bystander Intervention</button>
   	  </td>
   	  <td>
-  	    <button class="button" id="bt-safetyBasic" name="bt-safetyBasic" onclick="">Safety Plan Basics</button>
+  	    <button class="button" id="bt-safetyBasic" name="bt-safetyBasic" onclick="location.href='safetyPlanBasics.php';">Safety Plan Basics</button>
   	  </td>
   	</tr>
   	<tr align="center" id="tr-2" colspan="2">
   	  <td>
-  	    <button class="button" id="bt-safetyWorksheet" name="bt-safetyWorksheet" onclick="">Safety Plan Worksheet</button>
+  	    <button class="button" id="bt-safetyWorksheet" name="bt-safetyWorksheet" onclick="location.href='safetyPlanWorksheet.php';">Safety Plan Worksheet</button>
   	  </td>
   	</tr>
   </table>
-  </div><!--closing for table with buttons div-->
-
 </div><!--closing div for window-->
 </center>
 </body>

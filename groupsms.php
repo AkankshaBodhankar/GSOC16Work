@@ -1,9 +1,12 @@
 <?php
-    
+/*Created by Akanksha
+  Desc: Used to send bulk sms using Twilio API. Use in Circle of Trust
+*/   
     require "Services/Twilio.php";
     include 'loadComradeNumbers.php';
     $toNos = array();//comrade numbers will be added here
-    foreach ($phnos as $num) 
+
+    foreach ($dbphnos as $num)//$dbphnos come from loadComradeNumbers.php
     {
       if($num!=NULL)
       {
@@ -11,20 +14,19 @@
       }
     }
 
-   foreach ($toNos as &$value) {
-    $value = '+91'.$value; //Add +91 country code for India, for any other country add here
+    foreach ($toNos as &$value) {
+    $value = '+'.$value; //Add + to make it a valid number
    }
    unset($value);
 
-    if( $_REQUEST["msg"] ) //getting the body of the msg
-    {
+    if( $_REQUEST["msg"] ){ //getting the body of the msg from twilio-sms.js
 
       $msg = $_REQUEST['msg'];
     }
 
     //set AccountSid and AuthToken from www.twilio.com/user/account
-    $AccountSid = "AC352153773dfb04678b4a875f509169ee";
-    $AuthToken = "5d310051fdd83757fa6bbb157dbdc90a";
+    $AccountSid = "";
+    $AuthToken = "";
 
     // avoid tinyhttp exception
     $http = new Services_Twilio_TinyHttp('https://api.twilio.com', array('curlopts' => array(
@@ -41,7 +43,7 @@
         $sms = $client->account->messages->sendMessage(
         // Change the 'From' number below to be a valid Twilio number 
         // that you've purchased, or the (deprecated) Sandbox number
-            "+12056240076", 
+            "", 
             // the number we are sending to - Any phone number
             $number,
             // the sms body

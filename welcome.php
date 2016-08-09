@@ -1,12 +1,17 @@
 <?php
-   
-   session_start();
+/* 
+   Created by Akanksha
+   Desc: Welcome page - Displays recommended pages
+*/
+   if(!isset($_SESSION)){
+     session_start();
+   }
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
    }
    else
-    $_SESSION['welcomeopened'] = 1; //to prevent going back to progressBar(use in progressBar.php)
+     $_SESSION['welcomeopened'] = 1; //to prevent going back to progressBar(use in progressBar.php)
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,8 +30,8 @@
     <hr class="line">
     <h2 class="text">Recommended Pages to Get Started</h2>
   </div>
-
-  <table id="table">
+  
+  <table id="buttons-table">
   	<tr>
   	  <td>
   	    <button class="button" id="bt-safetystg" name="bt-safetystg">Safety Startegies Helpline</button>

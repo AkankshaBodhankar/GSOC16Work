@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: Navigation to features of safety tools (part 1)
+*/
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -30,8 +33,7 @@
       <img src="images/fw-arrow.png" style="height: 50px; width: 50px;">
     </a>
   </div>
-
-  <div id="div1">
+  <!--Navigation buttons-->
   <table id="btn-table">
     <tr>
       <td>
@@ -43,16 +45,14 @@
     </tr>
     <tr>
       <td>
-        <button class="button" id="bt-coping" name="bt-coping" onclick = "location.href='';" >Coping with unwanted Attention Strategies</button>
+        <button class="button" id="bt-coping" name="bt-coping" onclick = "location.href='copingWithUnwantedAttentionStrategies.php';" >Coping with unwanted Attention Strategies</button>
       </td>
       <td>
-        <button class="button" id="bt-commonalities" name="bt-commonalities" onclick = "location.href='';" >Commonalities of Sexual Predators</button>
+        <button class="button" id="bt-commonalities" name="bt-commonalities" onclick = "location.href='commonalitiesOfSexualPredators.php';" >Commonalities of Sexual Predators</button>
       </td>
     </tr>
   </table>
-  </div>
-
-</div>     
+</div><!--closing div for window--> 
 </center>
 </body>
 </html>

@@ -1,6 +1,10 @@
 <?php
+/*Created by Akanksha
+  Desc: Implementation for safety plan basics of 'Safety tools'
+*/
    
-   session_start();
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -12,9 +16,6 @@
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
- 
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </head>
 <body>
 <?php
@@ -27,7 +28,7 @@
     <hr class="line">
   </div>
 
-  <div class="dragscroll">
+  <div class="dragscroll"><!--dragscroll enables horizontal drag scrolling-->
   <table class="greaterthan5-blocks-content">
     <tr>
       <td class="block">
@@ -71,8 +72,9 @@
     </tr>
   </table>
   </div><!--closing div for dragscroll-->
-
 </div><!--closing div for window-->
 </center>
+  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </body>
 </html>

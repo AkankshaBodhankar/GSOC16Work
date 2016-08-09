@@ -1,3 +1,7 @@
+/*Created by Akanksha
+  Desc: Popup js for contact now of PCSaves, OfficeOfVictimAdvocacy, 
+  OfficeOfInspectorGeneral and OfficeOfCivilRightsAndDiversity
+*/
 function openPopup()
 {
   var popup = document.getElementById('popup-cnt');

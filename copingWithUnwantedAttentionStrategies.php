@@ -1,6 +1,9 @@
 <?php 
-
-   session_start();
+/*Created by Akanksha
+  Desc: Implementation for coping with unwanted attention strategies of 'Safety tools'
+*/
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -12,9 +15,6 @@
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
- 
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script><!--must be loaded first-->
-  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </head>
 <body>
 <?php
@@ -69,8 +69,9 @@
       </td>
     </tr>
   </table>
-  
 </div> <!--closing div of window-->
 </center>
+   <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script><!--must be loaded before use-->
+   <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </body>
 </html>

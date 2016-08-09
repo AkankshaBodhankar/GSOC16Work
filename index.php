@@ -1,3 +1,5 @@
+<!--Created by Akanksha
+    Desc: First page when app opened, displays logo and name of org and redirects to login after few seconds-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +13,6 @@
 </center>
 </body>
 <?php
-    header("refresh:2;url=login.php");
+    header("refresh:2;url=login.php");//redirect to login automatically after refreshing 2 times
 ?>
 </html>

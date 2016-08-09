@@ -1,6 +1,9 @@
 <?php
-   
-   session_start();
+/*Created by Akanksha
+  Desc: Implementation for Bystander Intervention of 'Safety tools'
+*/ 
+   if(!isset($_SESSION))
+     session_start();
    if(!isset($_SESSION['email']))
    {  
       header("location: login.php"); 
@@ -12,9 +15,6 @@
 <head>
   <title>FirstAide</title>
   <link rel="stylesheet" type="text/css" href="css files/safety-tools.css"/>
- 
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </head>
 <body>
 <?php
@@ -27,7 +27,7 @@
     <hr class="line">
   </div>
 
-  <div class="dragscroll">
+  <div class="dragscroll"><!--dragscroll enables horizontal drag scrolling-->
   <table class="threeorfour-blocks-content">
     <tr>
       <td class="block">
@@ -79,8 +79,9 @@
     </tr>
   </table>
   </div><!--closing div of dragscroll-->
-
 </div><!--closing div of window-->
 </center>
+  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="javascripts/dragscroll.js"></script>
 </body>
 </html>
