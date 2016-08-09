@@ -79,6 +79,7 @@ Read more about Twilio here: [Twilio](https://www.twilio.com/)
    1. Go to javascripts/getHelpNowPhNo.js
    2. Replace the sample numbers to your verified numbers
    3. Make Call or Send SMS from the App
+  
    #####Use in Circle of Trust module
    1. Open the app
    2. Go to Circle of Trust from the menu
