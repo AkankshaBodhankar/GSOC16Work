@@ -76,12 +76,20 @@ Read more about Twilio here: [Twilio](https://www.twilio.com/)
    After getting the numbers verified it's time to use this numbers to test the feature
    While adding the numbers make sure you enter the country code as well else, it won't work.
    #####Use in Get Help Now module
-   Go to javascripts/getHelpNowPhNo.js -> Replace the sample numbers to your verified numbers->Make Call or Send SMS from the App
+   1. Go to javascripts/getHelpNowPhNo.js
+   2. Replace the sample numbers to your verified numbers
+   3. Make Call or Send SMS from the App
    #####Use in Circle of Trust module
-   Open the app->Go to Circle of Trust from the menu-> Click edit icon-> Add your verified numbers there->Submit
-   Now go back to Circle of Trust-> Click Help Me icon-> Select a message-> An alert pops out saying 'Success' once messages are sent
+   1. Open the app
+   2. Go to Circle of Trust from the menu
+   3. Click edit icon
+   4. Add your verified numbers there
+   5. Submit and go back to Circle of Trust
+   6. Click Help Me icon and select a message
+   7. An alert pops out saying 'Success' once messages are sent
 
 References : 
+
 [Tutorial for SMS](https://www.youtube.com/watch?v=jZPeNfLD5Yc)
 
 [Tutorial for Group SMS](https://www.youtube.com/watch?v=G4oluQf_7S4)
