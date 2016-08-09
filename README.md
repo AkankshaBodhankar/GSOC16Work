@@ -59,7 +59,7 @@ Circle of Trust module
 
 Read more about Twilio here: [Twilio](https://www.twilio.com/)
 
-##Steps to enable Twilio in your localhost
+####Steps to enable Twilio in your localhost
 1. Get started with SMS and Call by creating an Account on Twilio here : [Twilio Register](https://www.twilio.com/try-twilio)
 2. Setting Account SID and Token
    Take the Account SID and Token provided by Twilio here [Your Twilio Credentials](https://www.twilio.com/console). Paste them at the correct places in  the twilioSMS.php, twilioCall.php and groupsms.php files
