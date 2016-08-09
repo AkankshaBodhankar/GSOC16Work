@@ -62,9 +62,14 @@ Read more about Twilio here: [Twilio](https://www.twilio.com/)
 ####Steps to enable Twilio in your localhost
 1. Get started with SMS and Call by creating an Account on Twilio here : [Twilio Register](https://www.twilio.com/try-twilio)
 2. Setting Account SID and Token
-   Take the Account SID and Token provided by Twilio here [Your Twilio Credentials](https://www.twilio.com/console). Paste them at the correct places in  the twilioSMS.php, twilioCall.php and groupsms.php files
+   
+   Take the Account SID and Token provided by Twilio here [Your Twilio Credentials](https://www.twilio.com/console)
+   
+   Paste them at the correct places in  the twilioSMS.php, twilioCall.php and groupsms.php files
 3. Setting From Number
-   Get a phone number from Twilio here: [Twilio phone number](https://www.twilio.com/console/phone-numbers/dashboard). Use this as the from number in the files twilioSMS.php, twilioCall.php and groupsms.php
+   Get a phone number from Twilio here: [Twilio phone number](https://www.twilio.com/console/phone-numbers/dashboard).
+
+   Use this as the from number in the files twilioSMS.php, twilioCall.php and groupsms.php
 4. Setting To Numbers :
    You can send a SMS or make a Call to a Twilio verified number only
 
