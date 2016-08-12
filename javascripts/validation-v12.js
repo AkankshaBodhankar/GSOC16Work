@@ -1,5 +1,5 @@
 /*Created by Akanksha
-  Desc: Vlidation for Registration
+  Desc: Validation for Registration
 */
 function validate()
 {
