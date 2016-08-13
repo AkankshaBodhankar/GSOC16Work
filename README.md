@@ -5,7 +5,7 @@
 
 The project repo of PCSA-Web : [PCSA-web repo](https://github.com/systers/PCSA-web)
 
-FirstAide is a web application also called PCSA web. Peace Corps provides support to all the volunteers who have been sexully assulated. The volunteers can get reporting procedures and other relevant information. The initiative is to provide commitment to the volunteers who are victims of sexual assault via the web app.
+FirstAide is a web application also called PCSA web. Peace Corps provides support to all the volunteers who have been sexually assulated. The volunteers can get reporting procedures and other relevant information. The initiative is to provide commitment to the volunteers who are victims of sexual assault via the web app.
 
 The project is built using the following technologies:
  1. PHP (Backend)
