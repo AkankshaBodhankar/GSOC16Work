@@ -80,7 +80,9 @@
         );
         echo "<script type='text/javascript'>salert('Success','Call started','success');</script>";
     } 
-    catch (Exception $e) {
-        echo 'Error: ' . $e->getMessage();
+    catch (\Services_Twilio_RestException $e) {
+        
+        $error = $e->getMessage();
+        echo "<script type='text/javascript'>salert('Error','$error','error');</script>";
     }
   }

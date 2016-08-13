@@ -47,8 +47,7 @@
 </center>
   <script src="javascripts/sweetalert.min.js"></script>
   <script src="javascripts/sweetalert.js"></script>
-  <script type="text/javascript" src="javascripts/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="javascripts/twilio-sms.js"></script>
+  <script src="javascripts/twilio-sms.js"></script>
 </body>
 </html>
 <?php
@@ -78,15 +77,22 @@ if(isset($_POST['SMS-body'])&&!empty($_POST['SMS-body']))
     $objConnection = new Services_Twilio($AccountSid, $AuthToken, '2010-04-01', $http); 
 
     // Send a new outgoinging SMS by POSTing to the SMS resource */
-    $bSuccess = $objConnection->account->sms_messages->create(
+    try {
+        $bSuccess = $objConnection->account->sms_messages->create(
         
         $strFromNumber,     
         $strToNumber,         
         $strMsg         // the sms body
-    );
+       );  
 
-        
-    echo "<script type='text/javascript'>salert('Success!','SMS Sent Successfully','success');</script>";
+       echo "<script type='text/javascript'>salert('Success!','SMS Sent Successfully','success');</script>";
+    }
+    catch(\Services_Twilio_RestException $e){
+      $error = $e->getMessage();
+      echo "<script type='text/javascript'>salert('SMS not sent','Possible Reason : Invalid phone number (It must be of the form countrycode followed by valid number Eg:15417543010)'
+      ,'error');</script>";
+    }
+
   }
   /*do not close php using ?> here*/
 

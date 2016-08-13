@@ -5,7 +5,13 @@ $(document).ready(function() {
                   "groupsms.php",
                   { msg: "Come and get me.I need help getting home safely.Call ASAP to get my Location.Message sent through First Aide's Circle of Trust" },
                   function(data) {
-                    salert('Success','Message has been sent to your comrades','success');
+                    
+                      if (data>=1) 
+                       salert('Success','Message has been sent to '+data+' comrades','success');
+                      else if(data==0)
+                        salert('Error','No comrades registered'+data,'error');
+                      else
+                        salert('Error',data,'error');
                     closePopup(); 
                     
                   }
@@ -18,7 +24,12 @@ $(document).ready(function() {
                   "groupsms.php",
                   { msg: "Call and pretend you need me.I need an interruption.Message sent through First Aide's Circle of Trust" },
                   function(data) {
-                    salert('Success','Message has been sent to your comrades','success'); 
+                      if (data>=1) 
+                       salert('Success','Message has been sent to '+data+' comrades','success');
+                      else if(data==0)
+                        salert('Error','No comrades registered'+data,'error');
+                      else
+                        salert('Error',data,'error'); 
                     closePopup();
                   }
                );
@@ -30,7 +41,12 @@ $(document).ready(function() {
                   "groupsms.php",
                   { msg: "I need to talk.Message sent through First Aide's Circle of Trust" },
                   function(data) {
-                    salert('Success','Message has been sent to your comrades','success'); 
+                      if (data>=1) 
+                       salert('Success','Message has been sent to '+data+' comrades','success');
+                      else if(data==0)
+                        salert('Error','No comrades registered'+data,'error');
+                      else
+                        salert('Error',data,'error');
                     closePopup();
                   }
                );

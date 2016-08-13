@@ -5,13 +5,18 @@
     require "Services/Twilio.php";
     include 'loadComradeNumbers.php';
     $toNos = array();//comrade numbers will be added here
+    $empty = 0;
+    $filled = 0;
 
     foreach ($dbphnos as $num)//$dbphnos come from loadComradeNumbers.php
     {
       if($num!=NULL)
       {
          array_push($toNos,$num);
+         $filled++;
       }
+      else
+        $empty++;
     }
 
     foreach ($toNos as &$value) {
@@ -38,18 +43,32 @@
 
     //Loop over all comrades. $number is a phone number above, and 
     // $name is the name next to it
-    foreach ($toNos as $number) {
+    try {
+      foreach ($toNos as $number) {
 
-        $sms = $client->account->messages->sendMessage(
-        // Change the 'From' number below to be a valid Twilio number 
-        // that you've purchased, or the (deprecated) Sandbox number
+         $sms = $client->account->messages->sendMessage(
+         // Change the 'From' number below to be a valid Twilio number 
+         // that you've purchased, or the (deprecated) Sandbox number
             "", 
             // the number we are sending to - Any phone number
             $number,
             // the sms body
             $msg
-        );
-
-        // Display a confirmation message on the screen
-        echo "Sent message";
+         );
+         // Send a valid response back to circleOfTrustMessage.js
+         $success = 1;
+         if($empty==6)
+            $success==0;
+         else
+            $success == $filled;
+         echo $success;
+      }
     }
+    catch(\Services_Twilio_RestException $e){
+        $error = $e->getMessage();
+        echo $error;
+    }
+    
+    /*do not close php using ?> here*/
+        
+    
