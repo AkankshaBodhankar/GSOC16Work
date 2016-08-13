@@ -71,7 +71,7 @@ Read more about Twilio here: [Twilio](https://www.twilio.com/)
 
    Use this as the from number in the files twilioSMS.php, twilioCall.php and groupsms.php
 4. Setting To Numbers :
-   You can send a SMS or make a Call to a Twilio verified number only
+   If you are using Twilio Trial Account you can send a SMS or make a Call to a Twilio verified number only. Upgraded accounts may not need to verify a number
 
    Procedure to verify a number in Twilio
    1. Go to (https://www.twilio.com/console/phone-numbers/dashboard)
